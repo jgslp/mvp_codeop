@@ -40,7 +40,7 @@ router.post("/students", async function(req, res, next) {
 router.put("/students/:id", async function(req, res, next) {
     //your code here
     let { firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes } = req.body;
-    let sql = `INSERT INTO students (firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes ) VALUES ('${firstname}', '${lastname}', '${birthdate}', '${annualDate}', '${triennialDate}', '${goal}', '${minutes}')`;
+    let sql = `UPDATE students SET (firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes ) VALUES ('${firstname}', '${lastname}', '${birthdate}', '${annualDate}', '${triennialDate}', '${goal}', '${minutes}') WHERE id = ${req.params.id} `;
     try {
       await db(sql);
       const results = await db("SELECT * FROM students");
