@@ -1,6 +1,6 @@
-
 import React, { useEffect, useState } from "react";
 import './App.css';
+import Table from './components/Table';
 
 function App() {
   let [students, setStudents] = useState([]);
@@ -29,7 +29,7 @@ function App() {
 
   async function getStudents() {
     try {
-      let results = await fetch("/api/students/");
+      let results = await fetch("/students");
       let data = await results.json();
       console.log(data);
       setStudents(data);
@@ -165,18 +165,15 @@ function App() {
           <button type="Submit">Submit</button>
       </form>
       <div className="content">
+        <div>{students}</div>
         <ul>
           {students.map(student => {
             <li key={student.id}>
               <span>{`${student.firstname}`}</span>
-              {/* <span>{`${student.lastname}`}</span>
-              <span>{`${student.birthdate}`}</span>
-              <span>{`${student.annualDate}`}</span>
-              <span>{`${student.triennialDate}`}</span>
-              <span>{`${student.minutes}`}</span> */}
             </li>
           })}
         </ul>
+        <Table studentData={students}/>
       </div>
     </div>
   );
