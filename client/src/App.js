@@ -113,55 +113,67 @@ function App() {
     <div className="App">
       <h1>Speech therapy app</h1>
       <form onSubmit={e => handleSubmit(e)}>
+          <label>First Name:
           <input 
             type="text"
             name="firstname"
-            placeholder="First Name"
+            label="First Name"
             onChange={e => handleChange(e)}
             value={newStudent.firstname} 
-            />        
+            /> 
+         </label>
+         <label> Last Name:    
           <input 
             type="text"
             name="lastname"
-            placeholder="Last Name"
+            label="Last Name"
             onChange={e => handleChange(e)}
             value={newStudent.lastname} 
-            />        
+            />   
+          </label> 
+          <label> Birthdate:   
           <input 
             type="date"
+            label="birthdate"
             name="birthdate"
             placeholder="Birthdate"
             onChange={e => handleChange(e)}
             value={newStudent.birthdate}   
-            />      
+            />
+          </label> 
+          <label> Annual Review Due:     
           <input 
             type="date"
             name="annualDate"
-            placeholder="Annual Review Date"
             onChange={e => handleChange(e)}
             value={newStudent.annualDate}
             />
+          </label>
+          <label> Triennial Reevaluation Due:
           <input 
             type="date"
             name="triennialDate"
-            placeholder="Triennial Reevaluation Date"
             onChange={e => handleChange(e)}
             value={newStudent.triennialDate} 
-            />            
+            />  
+            </label> 
+          <label> Minutes per Month:        
           <input 
             type="number"
             name="minutes"
             placeholder="Minutes per month"
             onChange={e => handleChange(e)}
             value={newStudent.minutes} 
-            />          
+            />   
+          </label>
+          <label> Student Goal:       
           <input 
             type="text"
             name="goal"
-            placeholder="Goal"
             onChange={e => handleChange(e)}
             value={newStudent.goal} 
-            />    
+            />   
+          </label> 
           <button type="Submit">Submit</button>
       </form>
       <div className="content">
