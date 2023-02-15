@@ -29,7 +29,7 @@ function App() {
 
   async function getStudents() {
     try {
-      let results = await fetch("/students");
+      let results = await fetch("/api/students/");
       let data = await results.json();
       console.log(data);
       setStudents(data);
@@ -47,14 +47,14 @@ function App() {
         annualDate: newStudent.annualDate,
         triennialDate: newStudent.triennialDate,
         minutes: newStudent.minutes,
-        goal: setNewStudent.goal
+        goal: newStudent.goal
       };
       let options = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       };
-      let results = await fetch("/students/", options);
+      let results = await fetch("/api/students", options);
       let data = await results.json();
       console.log(data);
       getStudents();
@@ -64,9 +64,9 @@ function App() {
     setNewStudent({
       firstname: "",
       lastname: "",
-      birthdate: 0,
-      annualDate: 0,
-      triennialDate: 0,
+      birthdate: Date.now(),
+      annualDate: Date.now(),
+      triennialDate: Date.now(),
       goal: "",
       minutes: 0,
     });
@@ -77,7 +77,7 @@ function App() {
       let options = {
         method: "PUT",
       };
-      let results = await fetch(`/students/${id}`, options);
+      let results = await fetch(`/api/students/${id}`, options);
       let data = await results.json();
       console.log(data);
       getStudents();
@@ -100,7 +100,7 @@ function App() {
       let options = {
         method: "DELETE"
       };
-      let results = await fetch(`/students/${id}`, options);
+      let results = await fetch(`/api/students/${id}`, options);
       let data = await results.json();
       console.log(data);
       getStudents();
@@ -154,7 +154,14 @@ function App() {
             placeholder="Minutes per month"
             onChange={e => handleChange(e)}
             value={newStudent.minutes} 
-            />            
+            />          
+          <input 
+            type="text"
+            name="goal"
+            placeholder="Goal"
+            onChange={e => handleChange(e)}
+            value={newStudent.goal} 
+            />    
           <button type="Submit">Submit</button>
       </form>
       <div className="content">
@@ -162,11 +169,11 @@ function App() {
           {students.map(student => {
             <li key={student.id}>
               <span>{`${student.firstname}`}</span>
-              <span>{`${student.lastname}`}</span>
+              {/* <span>{`${student.lastname}`}</span>
               <span>{`${student.birthdate}`}</span>
               <span>{`${student.annualDate}`}</span>
               <span>{`${student.triennialDate}`}</span>
-              <span>{`${student.minutes}`}</span>
+              <span>{`${student.minutes}`}</span> */}
             </li>
           })}
         </ul>

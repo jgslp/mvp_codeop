@@ -3,7 +3,7 @@ var router = express.Router();
 const db = require("../model/helper");
 
 // GET student list
-router.get("/students/", function(req, res, next) {
+router.get("/students", function(req, res, next) {
   db(`SELECT * FROM students;`)
     .then(results => {
       res.send(results.data);
@@ -23,10 +23,10 @@ router.get("/students/:id", async function(req, res, next) {
 });
 
 // INSERT a new student into the DB
-router.post("/students/", async function(req, res, next) {
+router.post("/students", async function(req, res, next) {
   //your code here
   let { firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes } = req.body;
-  let sql = `INSERT INTO students (firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes ) VALUES ('${firstname}', '${lastname}', '${birthdate}', '${annualDate}', '${triennialDate}', '${goal}, '${minutes}' ')`;
+  let sql = `INSERT INTO students (firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes ) VALUES ('${firstname}', '${lastname}', '${birthdate}', '${annualDate}', '${triennialDate}', '${goal}', '${minutes}')`;
   try {
     await db(sql);
     const results = await db("SELECT * FROM students");
@@ -35,6 +35,20 @@ router.post("/students/", async function(req, res, next) {
     res.status(500).send(err);
   }
 });
+
+// EDIT a student in the DB
+router.put("/students/:id", async function(req, res, next) {
+    //your code here
+    let { firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes } = req.body;
+    let sql = `INSERT INTO students (firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes ) VALUES ('${firstname}', '${lastname}', '${birthdate}', '${annualDate}', '${triennialDate}', '${goal}', '${minutes}')`;
+    try {
+      await db(sql);
+      const results = await db("SELECT * FROM students");
+      res.send(results.data);
+    } catch (err) {
+      res.status(500).send(err);
+    }
+  });
 
 // DELETE a student from the DB
 router.delete("/students/:id", async function(req, res, next) {
