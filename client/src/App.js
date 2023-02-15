@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   let [students, setStudents] = useState([]);
-  let [newStudent, setNewStudents] = useState({
+  let [newStudent, setNewStudent] = useState({
     firstname: "",
     lastname: "",
     birthdate: Date.now(),
@@ -33,14 +33,37 @@ function App() {
         annualDate: newStudent.annualDate,
         triennialDate: newStudent.triennialDate,
         minutes: newStudent.minutes,
-        goal: setNewStudents.goal
+        goal: setNewStudent.goal
       };
       let options = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       };
-      let results = await fetch("students/", options);
+      let results = await fetch("/students/", options);
+      let data = await results.json();
+      console.log(data);
+      getStudents();
+    } catch (err) {
+      console.log(err);
+    }
+    setNewStudent({
+      firstname: "",
+      lastname: "",
+      birthdate: 0,
+      annualDate: 0,
+      triennialDate: 0,
+      goal: "",
+      minutes: 0,
+    });
+  }
+
+  async function updateStudent(id) {
+    try {
+      let options = {
+        method: "PUT",
+      };
+      let results = await fetch(`/students/${id}`, options);
       let data = await results.json();
       console.log(data);
       getStudents();
@@ -63,7 +86,7 @@ function App() {
       let options = {
         method: "DELETE"
       };
-      let results = await fetch(`students/${id}`, options);
+      let results = await fetch(`/students/${id}`, options);
       let data = await results.json();
       console.log(data);
       getStudents();
