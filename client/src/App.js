@@ -72,28 +72,28 @@ function App() {
     });
   }
 
-  async function updateStudent(id) {
-    try {
-      let options = {
-        method: "PUT",
-      };
-      let results = await fetch(`/api/students/${id}`, options);
-      let data = await results.json();
-      console.log(data);
-      getStudents();
-    } catch (err) {
-      console.log(err);
-    }
-    setNewStudent({
-      firstname: "",
-      lastname: "",
-      birthdate: Date.now(),
-      annualDate: Date.now(),
-      triennialDate: Date.now(),
-      goal: "",
-      minutes: 0,
-    });
-  }
+  // async function updateStudent(id) {
+  //   try {
+  //     let options = {
+  //       method: "PUT",
+  //     };
+  //     let results = await fetch(`/api/students/${id}`, options);
+  //     let data = await results.json();
+  //     console.log(data);
+  //     getStudents();
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  //   setNewStudent({
+  //     firstname: "",
+  //     lastname: "",
+  //     birthdate: Date.now(),
+  //     annualDate: Date.now(),
+  //     triennialDate: Date.now(),
+  //     goal: "",
+  //     minutes: 0,
+  //   });
+  // }
 
   async function deleteStudent(id) {
     try {
