@@ -36,19 +36,18 @@ router.post("/students", async function(req, res, next) {
   }
 });
 
-// EDIT a student in the DB
-router.put("/students/:id", async function(req, res, next) {
-    //your code here
-    let { firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes } = req.body;
-    let sql = `UPDATE students SET (firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes ) VALUES ('${firstname}', '${lastname}', '${birthdate}', '${annualDate}', '${triennialDate}', '${goal}', '${minutes}') WHERE id = ${req.params.id} `;
-    try {
-      await db(sql);
-      const results = await db("SELECT * FROM students");
-      res.send(results.data);
-    } catch (err) {
-      res.status(500).send(err);
-    }
-  });
+// EDIT a student in the DB - not working
+// router.put("/students/:id", async function(req, res, next) {
+//     let { firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes } = req.body;
+//     let sql = `UPDATE students SET (firstname = '${firstname}', lastname = '${lastname}', birthdate = '${birthdate}', annualDate = '${annualDate}', triennialDate = '${triennialDate}', goal = '${goal}', minutes = ${minutes}) WHERE id = ${req.params.id} `;
+//     try {
+//       await db(sql);
+//       const results = await db("SELECT * FROM students");
+//       res.send(results.data);
+//     } catch (err) {
+//       res.status(500).send(err);
+//     }
+//   });
 
 // DELETE a student from the DB
 router.delete("/students/:id", async function(req, res, next) {
