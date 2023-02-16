@@ -4,8 +4,8 @@ import { useState } from "react";
 import TableBody from "./TableBody";
 import TableHead from "./TableHead";
 
-function Table(props) {
- const [tableData, setTableData] = useState(props.studentData);
+function Table({students}) {
+ const [tableData, setTableData] = useState(students);
 
  const columns = [
   { label: "First Name", accessor: "firstname" },
@@ -16,13 +16,25 @@ function Table(props) {
   { label: "Minutes per month", accessor: "minutes" },
  ];
 
+ const handleSorting = (sortField, sortOrder) => {
+  if (sortField) {
+    const sorted = [...tableData].sort((a, b) => {
+     return (
+      a[sortField].toString().localeCompare(b[sortField].toString(), "en", {
+       numeric: true,
+      }) * (sortOrder === "asc" ? 1 : -1)
+     );
+    });
+    setTableData(sorted);
+   }
+  };
+ 
  return (
   <>
    <table className="table">
     <caption>
-     Speech students on caseload, column headers are sortable.
     </caption>
-    <TableHead columns={columns} />
+    <TableHead columns={columns} handleSorting={handleSorting}/>
     <TableBody columns={columns} tableData={tableData} />
    </table>
   </>

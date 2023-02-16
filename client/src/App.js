@@ -181,14 +181,7 @@ function App() {
           <button type="Submit" className="btn btn-primary">Submit</button>
       </form>
       <div className="content">
-        <ul>
-          {students.map(student => { 
-            <li key={student.id}>
-              <span>{`${student.firstname}`}</span>
-            </li>
-          })}
-        </ul>
-        <Table studentData={students}/>
+        <Table students={students}/>
       </div>
     </div>
   );
