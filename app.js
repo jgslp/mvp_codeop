@@ -3,6 +3,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var studentsRouter = require('./routes/students');
 
@@ -16,6 +17,7 @@ app.use(cookieParser());
 
 // you can delete if you want or just delete users and keep the index
 app.use('/users', usersRouter);
-app.use('/api', studentsRouter);
+app.use('/', indexRouter);
+app.use('/students', studentsRouter);
 
 module.exports = app;

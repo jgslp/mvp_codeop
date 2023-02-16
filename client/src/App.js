@@ -38,7 +38,6 @@ function App() {
     }
   }
 
-
   async function addStudent() {
     try {
       let body = {
@@ -182,13 +181,12 @@ function App() {
           <button type="Submit" className="btn btn-primary">Submit</button>
       </form>
       <div className="content">
-        <div>{students}</div>
         <ul>
-          {students.map(student => { return (
+          {students.map(student => { 
             <li key={student.id}>
               <span>{`${student.firstname}`}</span>
             </li>
-          )})}
+          })}
         </ul>
         <Table studentData={students}/>
       </div>
