@@ -29,7 +29,7 @@ function App() {
 
   async function getStudents() {
     try {
-      let results = await fetch("/api/students");
+      let results = await fetch("/students");
       let data = await results.json();
       console.log(data);
       setStudents(data);
@@ -38,13 +38,9 @@ function App() {
     }
   }
 
+
   async function addStudent() {
     try {
-      let options = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body)
-      };
       let body = {
         firstname: newStudent.firstname,
         lastname: newStudent.lastname,
@@ -54,7 +50,12 @@ function App() {
         minutes: newStudent.minutes,
         goal: newStudent.goal
       };
-      let results = await fetch("/api/students", options);
+      let options = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
+      };
+      let results = await fetch("/students", options);
       let data = await results.json();
       console.log(data);
       getStudents();
@@ -95,19 +96,19 @@ function App() {
   //   });
   // }
 
-  async function deleteStudent(id) {
-    try {
-      let options = {
-        method: "DELETE"
-      };
-      let results = await fetch(`/api/students/${id}`, options);
-      let data = await results.json();
-      console.log(data);
-      getStudents();
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  // async function deleteStudent(id) {
+  //   try {
+  //     let options = {
+  //       method: "DELETE"
+  //     };
+  //     let results = await fetch(`/students/${id}`, options);
+  //     let data = await results.json();
+  //     console.log(data);
+  //     getStudents();
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
 
   return (
     <div className="App">
@@ -183,11 +184,11 @@ function App() {
       <div className="content">
         <div>{students}</div>
         <ul>
-          {students.map(student => {
+          {students.map(student => { return (
             <li key={student.id}>
               <span>{`${student.firstname}`}</span>
             </li>
-          })}
+          )})}
         </ul>
         <Table studentData={students}/>
       </div>
