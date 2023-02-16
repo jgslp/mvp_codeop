@@ -26,7 +26,7 @@ router.get("/students/:id", async function(req, res, next) {
 router.post("/students", async function(req, res, next) {
   //your code here
   let { firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes } = req.body;
-  let sql = `INSERT INTO students (firstname, lastname, birthdate, annualDate, triennialDate, goal, minutes ) VALUES ('${req.body.firstname}', '${req.body.lastname}', '${req.body.birthdate}', '${req.body.annualDate}', '${req.body.triennialDate}', '${req.bodygoal}', '${req.body.minutes}')`;
+  let sql = `INSERT INTO students (firstname, lastname, goal, minutes ) VALUES ('${req.body.firstname}', '${req.body.lastname}', '${req.bodygoal}', '${req.body.minutes}')`;
   try {
     await db(sql);
     const results = await db("SELECT * FROM students");
