@@ -7,9 +7,9 @@ function App() {
   let [newStudent, setNewStudent] = useState({
     firstname: "",
     lastname: "",
-    birthdate: Date.now(),
-    annualDate: Date.now(),
-    triennialDate: Date.now(),
+    // birthdate: Date.now(),
+    // annualDate: Date.now(),
+    // triennialDate: Date.now(),
     goal: "",
     minutes: 0,
   });
@@ -40,19 +40,19 @@ function App() {
 
   async function addStudent() {
     try {
-      let body = {
-        firstname: newStudent.firstname,
-        lastname: newStudent.lastname,
-        birthdate: newStudent.birthdate,
-        annualDate: newStudent.annualDate,
-        triennialDate: newStudent.triennialDate,
-        minutes: newStudent.minutes,
-        goal: newStudent.goal
-      };
       let options = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
+      };
+      let body = {
+        firstname: newStudent.firstname,
+        lastname: newStudent.lastname,
+        // birthdate: newStudent.birthdate,
+        // annualDate: newStudent.annualDate,
+        // triennialDate: newStudent.triennialDate,
+        minutes: newStudent.minutes,
+        goal: newStudent.goal
       };
       let results = await fetch("/api/students", options);
       let data = await results.json();
@@ -64,9 +64,9 @@ function App() {
     setNewStudent({
       firstname: "",
       lastname: "",
-      birthdate: Date.now(),
-      annualDate: Date.now(),
-      triennialDate: Date.now(),
+      // birthdate: Date.now(),
+      // annualDate: Date.now(),
+      // triennialDate: Date.now(),
       goal: "",
       minutes: 0,
     });
@@ -134,7 +134,7 @@ function App() {
                 /> 
               </div>  
               <div className="basic-inputs">
-                <label> Birthdate:</label>    
+                {/* <label> Birthdate:</label>    
                 <input 
                     type="date"
                     label="birthdate"
@@ -142,7 +142,7 @@ function App() {
                     placeholder="Birthdate"
                     onChange={e => handleChange(e)}
                     value={newStudent.birthdate}   
-                    /> 
+                    />  */}
                 <label> Minutes per Month: </label>       
                 <input 
                     type="number"
@@ -152,7 +152,7 @@ function App() {
                     value={newStudent.minutes} 
                     />  
               </div>
-              <div className="date-inputs">
+              {/* <div className="date-inputs">
                 <label> Annual Due:</label>   
                 <input 
                    type="date"
@@ -167,7 +167,7 @@ function App() {
                   onChange={e => handleChange(e)}
                   value={newStudent.triennialDate} 
                 />  
-          </div>
+          </div> */}
           <div className="goal-input">
               <label> Student Goal: </label>      
               <input 
