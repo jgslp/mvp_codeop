@@ -29,7 +29,7 @@ function App() {
 
   async function getStudents() {
     try {
-      let results = await fetch("/students");
+      let results = await fetch("/api/students");
       let data = await results.json();
       console.log(data);
       setStudents(data);

@@ -10,9 +10,9 @@ function Table(props) {
  const columns = [
   { label: "First Name", accessor: "firstname" },
   { label: "Last Name", accessor: "lastname" },
-  { label: "Birthdate", accessor: "birthdate" },
-  { label: "Annual Review", accessor: "annualDate" },
-  { label: "Triennial Reevaluation", accessor: "triennialDate" },
+//   { label: "Birthdate", accessor: "birthdate" },
+//   { label: "Annual Review", accessor: "annualDate" },
+//   { label: "Triennial Reevaluation", accessor: "triennialDate" },
   { label: "Minutes per month", accessor: "minutes" },
  ];
 
