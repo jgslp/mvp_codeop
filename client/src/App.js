@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import './App.css';
 import Table from './components/Table';
 import Form from './components/Form';
+import Navbar from './components/Navbar';
 
 
 function App() {
@@ -64,11 +65,10 @@ function App() {
  
   return (
     <div className="App">
-      <h1>Speech Therapy Case Manager</h1>
+      <Navbar />
+      <h1>My Student List</h1>
       <Form getStudents={getStudents}/>
-      <div className="content">
       <Table students={students} getStudents={getStudents} deleteStudent={deleteStudent}/>
-      </div>
     </div>
   );
 }
