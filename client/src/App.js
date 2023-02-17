@@ -1,33 +1,16 @@
 import React, { useEffect, useState } from "react";
 import './App.css';
 import Table from './components/Table';
-// import Form from './components/Form';
+import Form from './components/Form';
 
 
 function App() {
   let [students, setStudents] = useState([]);
-  let [newStudent, setNewStudent] = useState({
-    firstname: "",
-    lastname: "",
-    birthdate: Date.now(),
-    annual: Date.now(),
-    triennial: Date.now(),
-    goal: "",
-    minutes: 0,
-  });
+
 
   useEffect(() => {
     getStudents();
   }, []);
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    addStudent();
-  };
-
-  const handleChange = e => {
-    setNewStudent({ ...newStudent, [e.target.name]: e.target.value });
-  };
 
   async function getStudents() {
     try {
@@ -38,40 +21,6 @@ function App() {
     } catch(err) {
       console.log(err);
     }
-  }
-
-  async function addStudent() {
-    try {
-      let body = {
-        firstname: newStudent.firstname,
-        lastname: newStudent.lastname,
-        birthdate: newStudent.birthdate,
-        annual: newStudent.annualDate,
-        triennial: newStudent.triennialDate,
-        minutes: newStudent.minutes,
-        goal: newStudent.goal
-      };
-      let options = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body)
-      };
-      let results = await fetch("/students", options);
-      let data = await results.json();
-      console.log(data);
-      getStudents();
-    } catch (err) {
-      console.log(err);
-    }
-    setNewStudent({
-      firstname: "",
-      lastname: "",
-      birthdate: Date.now(),
-      annual: Date.now(),
-      triennial: Date.now(),
-      goal: "",
-      minutes: 0,
-    });
   }
 
   // async function updateStudent(id) {
@@ -114,74 +63,7 @@ function App() {
   return (
     <div className="App">
       <h1>Speech Therapy Case Manager</h1>
-      <form onSubmit={e => handleSubmit(e)}>
-
-          <div className="inputs">
-              <div className="name-inputs">
-                <label>First Name:</label>
-                <input 
-                  type="text"
-                  name="firstname"
-                  label="First Name"
-                  onChange={e => handleChange(e)}
-                  value={newStudent.firstname} 
-                /> 
-                <label> Last Name:</label>     
-                <input 
-                  type="text"
-                  name="lastname"
-                  label="Last Name"
-                  onChange={e => handleChange(e)}
-                  value={newStudent.lastname} 
-                /> 
-              </div>  
-              <div className="basic-inputs">
-                <label> Birthdate:</label>    
-                <input 
-                    type="date"
-                    label="birthdate"
-                    name="birthdate"
-                    placeholder="Birthdate"
-                    onChange={e => handleChange(e)}
-                    value={newStudent.birthdate}   
-                    /> 
-                <label> Minutes per Month: </label>       
-                <input 
-                    type="number"
-                    name="minutes"
-                    placeholder="Minutes per month"
-                    onChange={e => handleChange(e)}
-                    value={newStudent.minutes} 
-                    />  
-              </div>
-              <div className="date-inputs">
-                <label> Annual Due:</label>   
-                <input 
-                   type="date"
-                   name="annualDate"
-                   onChange={e => handleChange(e)}
-                   value={newStudent.annualDate}
-                /> 
-              <label> Triennial Due:</label> 
-              <input 
-                  type="date"
-                  name="triennialDate"
-                  onChange={e => handleChange(e)}
-                  value={newStudent.triennialDate} 
-                />  
-          </div>
-          <div className="goal-input">
-              <label> Student Goal: </label>      
-              <input 
-                  type="text"
-                  name="goal"
-                  onChange={e => handleChange(e)}
-                  value={newStudent.goal} 
-              />
-            </div>
-          </div>   
-          <button type="Submit" className="btn btn-primary">Submit</button>
-      </form>
+      <Form getStudents={getStudents}/>
       <div className="content">
         <Table students={students} deleteStudent={deleteStudent}/>
       </div>
