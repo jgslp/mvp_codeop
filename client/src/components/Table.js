@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import TableBody from "./TableBody";
 import TableHead from "./TableHead";
 
-function Table({students}) {
+function Table({students, getStudents, deleteStudent}) {
  const [tableData, setTableData] = useState(students);
 
  const columns = [
@@ -14,8 +14,10 @@ function Table({students}) {
   { label: "Annual Review", accessor: "annual" },
   { label: "Triennial Reevaluation", accessor: "triennial" },
   { label: "Minutes per month", accessor: "minutes" },
+  { label: "Remove student"}
  ];
 
+ // sorts table on column label click
  const handleSorting = (sortField, sortOrder) => {
   if (sortField) {
     const sorted = [...tableData].sort((a, b) => {
@@ -38,7 +40,7 @@ function Table({students}) {
     <caption>
     </caption>
     <TableHead columns={columns} handleSorting={handleSorting}/>
-    <TableBody columns={columns} tableData={tableData} />
+    <TableBody columns={columns} tableData={tableData} getStudents={getStudents} deleteStudent={deleteStudent}/>
    </table>
   </>
  );

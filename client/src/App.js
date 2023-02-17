@@ -7,11 +7,11 @@ import Form from './components/Form';
 function App() {
   let [students, setStudents] = useState([]);
 
-
   useEffect(() => {
     getStudents();
   }, []);
 
+  // add student to db
   async function getStudents() {
     try {
       let results = await fetch("/students");
@@ -19,6 +19,21 @@ function App() {
       console.log(data);
       setStudents(data);
     } catch(err) {
+      console.log(err);
+    }
+  }
+
+  // delete student from db
+  async function deleteStudent(id) {
+    try {
+      let options = {
+        method: "DELETE"
+      };
+      let results = await fetch(`/students/${id}`, options);
+      let data = await results.json();
+      console.log(data);
+      getStudents();
+    } catch (err) {
       console.log(err);
     }
   }
@@ -46,26 +61,13 @@ function App() {
   //   });
   // }
 
-  async function deleteStudent(id) {
-    try {
-      let options = {
-        method: "DELETE"
-      };
-      let results = await fetch(`/students/${id}`, options);
-      let data = await results.json();
-      console.log(data);
-      getStudents();
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
+ 
   return (
     <div className="App">
       <h1>Speech Therapy Case Manager</h1>
       <Form getStudents={getStudents}/>
       <div className="content">
-        <Table students={students} deleteStudent={deleteStudent}/>
+      <Table students={students} getStudents={getStudents} deleteStudent={deleteStudent}/>
       </div>
     </div>
   );

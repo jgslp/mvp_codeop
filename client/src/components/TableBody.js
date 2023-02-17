@@ -1,14 +1,17 @@
-function TableBody({ tableData, columns }) {
+function TableBody({ tableData, deleteStudent}) {
+
     return (
      <tbody>
       {tableData.map((data) => {
        return (
         <tr key={data.id}>
-         {columns.map(({ accessor }) => {
-          const tData = data[accessor] ? data[accessor] : "——";
-          return <td key={accessor}>{tData}</td>;
-         })}
-         <span className="material-symbols-outlined">delete</span>
+            <td>{data.firstname ? data.firstname : "——"}</td>
+            <td>{data.lastname ? data.lastname : "——"}</td>
+            <td>{data.birthdate ? data.birthdate : "——"}</td>
+            <td>{data.annual ? data.annual : "——"}</td>
+            <td>{data.triennial ? data.triennial : "——"}</td>
+            <td>{data.minutes ? data.minutes : "——"}</td>
+            <td><span className="material-symbols-outlined" onClick={() => deleteStudent(data.id)}>delete</span></td>
         </tr>
        );
       })}
