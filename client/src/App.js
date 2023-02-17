@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import './App.css';
 import Table from './components/Table';
+// import Form from './components/Form';
+
 
 function App() {
   let [students, setStudents] = useState([]);
@@ -8,8 +10,8 @@ function App() {
     firstname: "",
     lastname: "",
     // birthdate: Date.now(),
-    // annualDate: Date.now(),
-    // triennialDate: Date.now(),
+    // annual: Date.now(),
+    // triennial: Date.now(),
     goal: "",
     minutes: 0,
   });
@@ -43,9 +45,9 @@ function App() {
       let body = {
         firstname: newStudent.firstname,
         lastname: newStudent.lastname,
-        // birthdate: newStudent.birthdate,
-        // annualDate: newStudent.annualDate,
-        // triennialDate: newStudent.triennialDate,
+        birthdate: newStudent.birthdate,
+        annual: newStudent.annualDate,
+        triennial: newStudent.triennialDate,
         minutes: newStudent.minutes,
         goal: newStudent.goal
       };
@@ -64,9 +66,9 @@ function App() {
     setNewStudent({
       firstname: "",
       lastname: "",
-      // birthdate: Date.now(),
-      // annualDate: Date.now(),
-      // triennialDate: Date.now(),
+      birthdate: Date.now(),
+      annual: Date.now(),
+      triennial: Date.now(),
       goal: "",
       minutes: 0,
     });
@@ -134,7 +136,7 @@ function App() {
                 /> 
               </div>  
               <div className="basic-inputs">
-                {/* <label> Birthdate:</label>    
+                <label> Birthdate:</label>    
                 <input 
                     type="date"
                     label="birthdate"
@@ -142,7 +144,7 @@ function App() {
                     placeholder="Birthdate"
                     onChange={e => handleChange(e)}
                     value={newStudent.birthdate}   
-                    />  */}
+                    /> 
                 <label> Minutes per Month: </label>       
                 <input 
                     type="number"
@@ -152,7 +154,7 @@ function App() {
                     value={newStudent.minutes} 
                     />  
               </div>
-              {/* <div className="date-inputs">
+              <div className="date-inputs">
                 <label> Annual Due:</label>   
                 <input 
                    type="date"
@@ -167,7 +169,7 @@ function App() {
                   onChange={e => handleChange(e)}
                   value={newStudent.triennialDate} 
                 />  
-          </div> */}
+          </div>
           <div className="goal-input">
               <label> Student Goal: </label>      
               <input 

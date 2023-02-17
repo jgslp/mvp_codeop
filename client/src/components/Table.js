@@ -10,9 +10,9 @@ function Table({students}) {
  const columns = [
   { label: "First Name", accessor: "firstname" },
   { label: "Last Name", accessor: "lastname" },
-//   { label: "Birthdate", accessor: "birthdate" },
-//   { label: "Annual Review", accessor: "annualDate" },
-//   { label: "Triennial Reevaluation", accessor: "triennialDate" },
+  { label: "Birthdate", accessor: "birthdate" },
+  { label: "Annual Review", accessor: "annual" },
+  { label: "Triennial Reevaluation", accessor: "triennial" },
   { label: "Minutes per month", accessor: "minutes" },
  ];
 
