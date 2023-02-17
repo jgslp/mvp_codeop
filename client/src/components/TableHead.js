@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 function TableHead({ columns, handleSorting }) {
     const [sortField, setSortField] = useState("");
     const [order, setOrder] = useState("asc");

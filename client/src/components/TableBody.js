@@ -8,6 +8,7 @@ function TableBody({ tableData, columns }) {
           const tData = data[accessor] ? data[accessor] : "——";
           return <td key={accessor}>{tData}</td>;
          })}
+         <span className="material-symbols-outlined">delete</span>
         </tr>
        );
       })}

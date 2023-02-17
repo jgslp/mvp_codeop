@@ -9,9 +9,9 @@ function App() {
   let [newStudent, setNewStudent] = useState({
     firstname: "",
     lastname: "",
-    // birthdate: Date.now(),
-    // annual: Date.now(),
-    // triennial: Date.now(),
+    birthdate: Date.now(),
+    annual: Date.now(),
+    triennial: Date.now(),
     goal: "",
     minutes: 0,
   });
@@ -97,19 +97,19 @@ function App() {
   //   });
   // }
 
-  // async function deleteStudent(id) {
-  //   try {
-  //     let options = {
-  //       method: "DELETE"
-  //     };
-  //     let results = await fetch(`/students/${id}`, options);
-  //     let data = await results.json();
-  //     console.log(data);
-  //     getStudents();
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // }
+  async function deleteStudent(id) {
+    try {
+      let options = {
+        method: "DELETE"
+      };
+      let results = await fetch(`/students/${id}`, options);
+      let data = await results.json();
+      console.log(data);
+      getStudents();
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   return (
     <div className="App">
@@ -183,7 +183,7 @@ function App() {
           <button type="Submit" className="btn btn-primary">Submit</button>
       </form>
       <div className="content">
-        <Table students={students}/>
+        <Table students={students} deleteStudent={deleteStudent}/>
       </div>
     </div>
   );
