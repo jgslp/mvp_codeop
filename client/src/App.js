@@ -111,7 +111,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Speech therapy app</h1>
+      <h1>Speech Therapy Case Manager</h1>
       <form onSubmit={e => handleSubmit(e)}>
 
           <div className="inputs">
