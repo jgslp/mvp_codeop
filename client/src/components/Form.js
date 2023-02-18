@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Form.css';
 
 function Form({getStudents}) {
     let [newStudent, setNewStudent] = useState({
@@ -26,8 +27,8 @@ function Form({getStudents}) {
             firstname: newStudent.firstname,
             lastname: newStudent.lastname,
             birthdate: newStudent.birthdate,
-            annual: newStudent.annualDate,
-            triennial: newStudent.triennialDate,
+            annual: newStudent.annual,
+            triennial: newStudent.triennial,
             minutes: newStudent.minutes,
             goal: newStudent.goal
           };
@@ -58,9 +59,11 @@ function Form({getStudents}) {
         <form onSubmit={e => handleSubmit(e)}>
 
         <div className="inputs">
-            <div className="name-inputs">
+          <div className="inputs-top">
+            <div className="basic-inputs">
               <label>First Name:</label>
               <input 
+                className="small-input"
                 type="text"
                 name="firstname"
                 label="First Name"
@@ -69,16 +72,27 @@ function Form({getStudents}) {
               /> 
               <label> Last Name:</label>     
               <input 
+                className="small-input"
                 type="text"
                 name="lastname"
                 label="Last Name"
                 onChange={e => handleChange(e)}
                 value={newStudent.lastname} 
               /> 
-            </div>  
-            <div className="basic-inputs">
-              <label> Birthdate:</label>    
+              <label> Minutes per Month: </label>      
               <input 
+                  className="small-input"
+                  type="number"
+                  name="minutes"
+                  placeholder="Minutes per month"
+                  onChange={e => handleChange(e)}
+                  value={newStudent.minutes} 
+                  />  
+            </div>  
+            <div className="date-inputs">
+              <label className="date-label"> Birthdate:</label>    
+              <input 
+                  className="small-input"
                   type="date"
                   label="birthdate"
                   name="birthdate"
@@ -86,42 +100,37 @@ function Form({getStudents}) {
                   onChange={e => handleChange(e)}
                   value={newStudent.birthdate}   
                   /> 
-              <label> Minutes per Month: </label>       
+              <label className="date-label"> Annual Due:</label>   
               <input 
-                  type="number"
-                  name="minutes"
-                  placeholder="Minutes per month"
-                  onChange={e => handleChange(e)}
-                  value={newStudent.minutes} 
-                  />  
-            </div>
-            <div className="date-inputs">
-              <label> Annual Due:</label>   
-              <input 
+                 className="small-input"
                  type="date"
                  name="annualDate"
                  onChange={e => handleChange(e)}
                  value={newStudent.annualDate}
               /> 
-            <label> Triennial Due:</label> 
+            <label className="date-label"> Triennial Due:</label> 
             <input 
+                className="small-input"
                 type="date"
                 name="triennialDate"
                 onChange={e => handleChange(e)}
                 value={newStudent.triennialDate} 
               />  
+              </div>
         </div>
         <div className="goal-input">
             <label> Student Goal: </label>      
             <input 
+                className="large-input"
                 type="text"
                 name="goal"
                 onChange={e => handleChange(e)}
                 value={newStudent.goal} 
             />
           </div>
+          <button type="Submit" className="btn btn-primary">Add Student</button>  
         </div>   
-        <button type="Submit" className="btn btn-primary">Submit</button>
+       
     </form>
     )
 }

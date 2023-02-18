@@ -1,10 +1,10 @@
-//https://blog.logrocket.com/creating-react-sortable-table
+// used tutorial https://blog.logrocket.com/creating-react-sortable-table
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import TableBody from "./TableBody";
 import TableHead from "./TableHead";
 
-function Table({students, getStudents, deleteStudent}) {
+function Table({students, deleteStudent, getStudents}) {
  const [tableData, setTableData] = useState(students);
 
  const columns = [

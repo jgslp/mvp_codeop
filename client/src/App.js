@@ -55,8 +55,8 @@ function App() {
   //     firstname: "",
   //     lastname: "",
   //     birthdate: Date.now(),
-  //     annualDate: Date.now(),
-  //     triennialDate: Date.now(),
+  //     annual: Date.now(),
+  //     triennial: Date.now(),
   //     goal: "",
   //     minutes: 0,
   //   });

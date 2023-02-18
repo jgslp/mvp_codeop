@@ -1,0 +1,48 @@
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px ;
+    align-items: center;
+}
+
+.inputs-top {
+    display: flex;
+}
+
+.basic-inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.date-inputs {
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+}
+
+.goal-input {
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+}
+
+.small-input {
+    width: 200px;
+}
+
+.large-input {
+    width: 414px;
+    height: 70px;
+}
+
+.date-label {
+    padding-bottom: 2px
+}
+
+#btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
