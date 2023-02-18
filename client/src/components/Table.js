@@ -14,7 +14,7 @@ function Table({students, getStudents, deleteStudent}) {
   { label: "Annual Review", accessor: "annual" },
   { label: "Triennial Reevaluation", accessor: "triennial" },
   { label: "Minutes per month", accessor: "minutes" },
-  { label: "Remove student"}
+  { label: "Remove student", accessor: "remove"}
  ];
 
  // sorts table on column label click
