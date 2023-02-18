@@ -57,7 +57,7 @@ function Form({getStudents}) {
 
     return (
         <form onSubmit={e => handleSubmit(e)}>
-
+        <h1>My Student List</h1>
         <div className="inputs">
           <div className="inputs-top">
             <div className="basic-inputs">

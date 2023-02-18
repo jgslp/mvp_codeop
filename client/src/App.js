@@ -2,16 +2,21 @@ import React, { useEffect, useState } from "react";
 import './App.css';
 import Table from './components/Table';
 import Form from './components/Form';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
+import Progress from './components/Progress';
 
 
 function App() {
   let [students, setStudents] = useState([]);
-
+  let [isProgressView, setIsProgressView] = useState(false);
+  
   useEffect(() => {
     getStudents();
   }, []);
 
+  const handleChangeView = (isProgressView) => {
+    setIsProgressView(isProgressView);
+}
   // add student to db
   async function getStudents() {
     try {
@@ -65,10 +70,24 @@ function App() {
  
   return (
     <div className="App">
-      <Navbar />
-      <h1>My Student List</h1>
-      <Form getStudents={getStudents}/>
-      <Table students={students} getStudents={getStudents} deleteStudent={deleteStudent}/>
+       <nav className="navbar navbar-default navbar-fixed-top">
+          <div className="navbar-header navbar-brand">SLP Case Manager</div>
+          <div>
+              <button className={ `nav-button ${!isProgressView ? "btn large" : "btn"} `} onClick={() => handleChangeView(false)}>Caseload</button>
+              <button className={ `nav-button ${isProgressView ? "btn large" : "btn"} `} onClick={() => handleChangeView(true)}>Progress</button>
+          </div>
+        </nav> 
+
+      <main>
+        {isProgressView ? (
+            <Progress students={students}/>
+        ) : (
+          <div>
+            <Form getStudents={getStudents}/>
+            <Table students={students} getStudents={getStudents} deleteStudent={deleteStudent}/>
+          </div>
+        )}
+      </main>
     </div>
   );
 }

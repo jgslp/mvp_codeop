@@ -5,3 +5,23 @@ h1 {
   margin-bottom: 15px;
   color: black;
 }
+
+.navbar{
+  padding: 10px 10px 10px 0px;
+  background-color: #24a0ed;
+  transition: all ease 0.4s;
+}
+.navbar-brand{
+  font-size: 22px;
+  color: white !important;
+  margin-left: 20px;
+}
+.nav-button {
+  font-size: 16px;
+  color: white;
+}
+
+.large {
+  font-size: 18px;
+  font-weight: bold;
+}
