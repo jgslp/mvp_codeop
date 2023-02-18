@@ -17,7 +17,7 @@ function App() {
   const handleChangeView = (isProgressView) => {
     setIsProgressView(isProgressView);
 }
-  // add student to db
+  // get student
   async function getStudents() {
     try {
       let results = await fetch("/students");
@@ -28,6 +28,7 @@ function App() {
       console.log(err);
     }
   }
+
 
   // delete student from db
   async function deleteStudent(id) {
@@ -80,7 +81,7 @@ function App() {
 
       <main>
         {isProgressView ? (
-            <Progress students={students}/>
+            <Progress students={students} getStudents={getStudents}/>
         ) : (
           <div>
             <Form getStudents={getStudents}/>
