@@ -1,6 +1,6 @@
 // used tutorial https://blog.logrocket.com/creating-react-sortable-table
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TableBody from "./TableBody";
 import TableHead from "./TableHead";
 
