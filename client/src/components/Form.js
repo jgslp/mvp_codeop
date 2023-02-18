@@ -120,9 +120,8 @@ function Form({getStudents}) {
         </div>
         <div className="goal-input">
             <label> Student Goal: </label>      
-            <input 
+            <textarea 
                 className="large-input"
-                type="text"
                 name="goal"
                 onChange={e => handleChange(e)}
                 value={newStudent.goal} 
