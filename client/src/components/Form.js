@@ -84,7 +84,6 @@ function Form({getStudents}) {
                   className="small-input"
                   type="number"
                   name="minutes"
-                  placeholder="Minutes per month"
                   onChange={e => handleChange(e)}
                   value={newStudent.minutes} 
                   />  
