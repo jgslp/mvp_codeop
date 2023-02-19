@@ -144,7 +144,7 @@ function Form({getStudents}) {
         <div className="goal-input">
              <div className="input-group">
                  <div className="input-group-prepend">
-                    <span className="input-group-text">Goal</span>
+                    <span className="input-group-text goal-span">Goal</span>
                  </div>      
                 <textarea 
                     className="large-input form-control"

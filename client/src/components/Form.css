@@ -29,6 +29,7 @@ input[type=date] {
 .goal-input {
     display: flex;
     flex-direction: column;
+    width: 640px;
 }
 
 .small-input {
@@ -46,4 +47,8 @@ input[type=date] {
 
 textarea {
     margin-bottom: 10px;
+}
+
+.goal-span {
+    height: 70px;
 }
