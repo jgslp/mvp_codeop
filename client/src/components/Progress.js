@@ -7,6 +7,7 @@ function Progress({students, getStudents}) {
 
     });
 
+
     // get one student
     async function viewProfile(id) {
         try {
@@ -40,13 +41,32 @@ function Progress({students, getStudents}) {
                     )})}
                 </ul>
             </div>
-            <div className="profileSection">
+            <div className="profile-section">
                 {profile && (
                     <div>
                         <h3>{`${profileStudent.firstname} ${profileStudent.lastname}`}</h3>
                         <h6>{profileStudent.goal}</h6>
                     </div>
                 )}
+                <form>
+                    <div className="progress-inputs">
+                        <input type="date" className="session-input"></input>
+                        <select name="" id="" className="session-input">
+                            <option value="">{`High five, ${profileStudent.firstname}!`}</option>
+                            <option value="">{`Thanks for your hard work today, ${profileStudent.firstname}!`}</option>
+                            <option value="">{`Amazing job, ${profileStudent.firstname}!`}</option>
+                            <option value="">{`Outstanding effort, ${profileStudent.firstname}!`}</option>
+                            <option value="">{`Keep up the good work, ${profileStudent.firstname}!`}</option>
+                            <option value="">{`${profileStudent.firstname} had difficulty participating in speech today.`}</option>
+                            <option value="">{`${profileStudent.firstname} was unavailable for speech today.`}</option>
+                            <option value="">{`${profileStudent.firstname} was absent from school today.`}</option>
+                        </select>
+                        <input type="number" className="session-input" placeholder="% trials correct"></input>
+                        <textarea className="session-input" placeholder="Anecdotal data"></textarea>
+                        <textarea className="session-input" placeholder="Skill to practice at home"></textarea>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Add session</button>
+                </form>
             </div>
         </div>
     )

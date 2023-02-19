@@ -7,5 +7,20 @@ ul {
 }
 
 .card {
-    width: 18rem;
+    width: 14rem;
+    margin-top: 20px;
+}
+
+.progress-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.session-input {
+    margin-bottom: 5px;
 }
