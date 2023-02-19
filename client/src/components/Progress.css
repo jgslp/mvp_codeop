@@ -21,6 +21,6 @@ ul {
     margin-top: 20px;
 }
 
-.session-input {
-    margin-bottom: 5px;
+.textarea-span {
+ height: 60px;
 }
