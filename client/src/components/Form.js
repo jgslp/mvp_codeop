@@ -61,37 +61,52 @@ function Form({getStudents}) {
         <div className="inputs">
           <div className="inputs-top">
             <div className="basic-inputs">
-              <label>First Name:</label>
-              <input 
-                className="small-input"
-                type="text"
-                name="firstname"
-                label="First Name"
-                onChange={e => handleChange(e)}
-                value={newStudent.firstname} 
-              /> 
-              <label> Last Name:</label>     
-              <input 
-                className="small-input"
-                type="text"
-                name="lastname"
-                label="Last Name"
-                onChange={e => handleChange(e)}
-                value={newStudent.lastname} 
-              /> 
-              <label> Minutes per Month: </label>      
-              <input 
-                  className="small-input"
+              <div className="input-group mb-3">
+                <div className="input-group-prepend">
+                    <span className="input-group-text" id="basic-addon1">First Name</span>
+                </div>
+                <input 
+                    className="small-input input-group form-control"
+                    type="text"
+                    name="firstname"
+                    label="First Name"
+                    onChange={e => handleChange(e)}
+                    value={newStudent.firstname} 
+                />  
+              </div>
+              <div className="input-group mb-3">
+                <div className="input-group-prepend">
+                    <span className="input-group-text" id="basic-addon1">Last Name</span>
+                </div>   
+                <input 
+                    className="small-input form-control"
+                    type="text"
+                    name="lastname"
+                    label="Last Name"
+                    onChange={e => handleChange(e)}
+                    value={newStudent.lastname} 
+                /> 
+              </div> 
+              <div className="input-group mb-3">
+                <div className="input-group-prepend">
+                    <span className="input-group-text" id="basic-addon1">Minutes/month</span>
+                </div>    
+                <input 
+                  className="small-input form-control"
                   type="number"
                   name="minutes"
                   onChange={e => handleChange(e)}
                   value={newStudent.minutes} 
                   />  
+                </div>
             </div>  
             <div className="date-inputs">
-              <label className="date-label"> Birthdate:</label>    
-              <input 
-                  className="small-input"
+                <div className="input-group mb-3">
+                 <div className="input-group-prepend">
+                    <span className="input-group-text" id="basic-addon1">Birthdate</span>
+                 </div>    
+                <input 
+                  className="small-input form-control"
                   type="date"
                   label="birthdate"
                   name="birthdate"
@@ -99,32 +114,45 @@ function Form({getStudents}) {
                   onChange={e => handleChange(e)}
                   value={newStudent.birthdate}   
                   /> 
-              <label className="date-label"> Annual Due:</label>   
+                </div>
+                <div className="input-group mb-3">
+                 <div className="input-group-prepend">
+                    <span className="input-group-text" id="basic-addon1">Annual due</span>
+                 </div>  
               <input 
-                 className="small-input"
+                 className="small-input form-control"
                  type="date"
                  name="annualDate"
                  onChange={e => handleChange(e)}
                  value={newStudent.annualDate}
               /> 
-            <label className="date-label"> Triennial Due:</label> 
+              </div>
+              <div className="input-group mb-3">
+                 <div className="input-group-prepend">
+                    <span className="input-group-text" id="basic-addon1">Triennual due</span>
+                 </div>  
             <input 
-                className="small-input"
+                className="small-input form-control"
                 type="date"
                 name="triennialDate"
                 onChange={e => handleChange(e)}
                 value={newStudent.triennialDate} 
               />  
               </div>
+              </div>
         </div>
         <div className="goal-input">
-            <label> Student Goal: </label>      
-            <textarea 
-                className="large-input"
-                name="goal"
-                onChange={e => handleChange(e)}
-                value={newStudent.goal} 
-            />
+             <div className="input-group">
+                 <div className="input-group-prepend">
+                    <span className="input-group-text">Goal</span>
+                 </div>      
+                <textarea 
+                    className="large-input form-control"
+                    name="goal"
+                    onChange={e => handleChange(e)}
+                    value={newStudent.goal} 
+                 ></textarea>
+                 </div>
           </div>
           <button type="Submit" className="btn btn-primary">Add Student</button>  
         </div>   
