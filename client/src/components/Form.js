@@ -2,7 +2,6 @@ import { useState } from "react";
 import './Form.css';
 
 function Form({getStudents}) {
-    // dates initialized to string
     let [newStudent, setNewStudent] = useState({
         firstname: "",
         lastname: "",
@@ -55,29 +54,6 @@ function Form({getStudents}) {
           minutes: 0,
         });
       }
-
-  // async function updateStudent(id) {
-  //   try {
-  //     let options = {
-  //       method: "PUT",
-  //     };
-  //     let results = await fetch(`/api/students/${id}`, options);
-  //     let data = await results.json();
-  //     console.log(data);
-  //     getStudents();
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  //   setNewStudent({
-  //     firstname: "",
-  //     lastname: "",
-  //     birthdate: "",
-  //     annual: "",
-  //     triennial: "",
-  //     goal: "",
-  //     minutes: 0,
-  //   });
-  // }
 
     return (
         <form onSubmit={e => handleSubmit(e)}>
@@ -146,7 +122,6 @@ function Form({getStudents}) {
               <input 
                  className="small-input form-control"
                  type="date"
-                 label="annual"
                  name="annual"
                  onChange={e => handleChange(e)}
                  value={newStudent.annual}
@@ -159,7 +134,6 @@ function Form({getStudents}) {
             <input 
                 className="small-input form-control"
                 type="date"
-                label="triennial"
                 name="triennial"
                 onChange={e => handleChange(e)}
                 value={newStudent.triennial} 
