@@ -14,6 +14,7 @@ function Table({students, deleteStudent, getStudents}) {
   { label: "Annual Review", accessor: "annual" },
   { label: "Triennial Reevaluation", accessor: "triennial" },
   { label: "Minutes per month", accessor: "minutes" },
+  { label: "Edit student", accessor: "edit"},
   { label: "Remove student", accessor: "remove"}
  ];
 
