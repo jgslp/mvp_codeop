@@ -123,9 +123,10 @@ function Form({getStudents}) {
               <input 
                  className="small-input form-control"
                  type="date"
-                 name="annualDate"
+                 label="annual"
+                 name="annual"
                  onChange={e => handleChange(e)}
-                 value={newStudent.annualDate}
+                 value={newStudent.annual}
               /> 
               </div>
               <div className="input-group mb-3">
@@ -135,9 +136,10 @@ function Form({getStudents}) {
             <input 
                 className="small-input form-control"
                 type="date"
-                name="triennialDate"
+                label="triennial"
+                name="triennial"
                 onChange={e => handleChange(e)}
-                value={newStudent.triennialDate} 
+                value={newStudent.triennial} 
               />  
               </div>
               </div>
