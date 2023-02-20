@@ -40,7 +40,7 @@ function Table({students, deleteStudent, getStudents}) {
     <caption>
     </caption>
     <TableHead columns={columns} handleSorting={handleSorting}/>
-    <TableBody columns={columns} tableData={tableData} getStudents={getStudents} deleteStudent={deleteStudent}/>
+    <TableBody columns={columns} tableData={students} getStudents={getStudents} deleteStudent={deleteStudent}/>
    </table>
   </>
  );

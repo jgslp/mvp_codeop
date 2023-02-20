@@ -23,8 +23,8 @@ router.get("/:id", async function(req, res, next) {
 
 // INSERT a new student into the DB
 router.post("/", async function(req, res, next) {
-  let { firstname, lastname, minutes, goal } = req.body;
-  let sql = `INSERT INTO students (firstname, lastname, minutes, goal) VALUES ('${firstname}', '${lastname}', '${minutes}', '${goal}')`;
+  let { firstname, lastname, minutes, goal, birthdate } = req.body;
+  let sql = `INSERT INTO students (firstname, lastname, minutes, goal, birthdate) VALUES ('${firstname}', '${lastname}', '${minutes}', '${goal}', '${birthdate}')`;
   try {
     await db(sql);
     const results = await db("SELECT * FROM students");

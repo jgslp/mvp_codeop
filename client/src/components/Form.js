@@ -5,9 +5,9 @@ function Form({getStudents}) {
     let [newStudent, setNewStudent] = useState({
         firstname: "",
         lastname: "",
-        birthdate: Date.now(),
-        annual: Date.now(),
-        triennial: Date.now(),
+        birthdate: "",
+        annual: "",
+        triennial: "",
         goal: "",
         minutes: 0,
       });
@@ -47,9 +47,9 @@ function Form({getStudents}) {
         setNewStudent({
           firstname: "",
           lastname: "",
-          birthdate: Date.now(),
-          annual: Date.now(),
-          triennial: Date.now(),
+          birthdate: "",
+          annual: "",
+          triennial: "",
           goal: "",
           minutes: 0,
         });
