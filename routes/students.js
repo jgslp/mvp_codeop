@@ -23,8 +23,8 @@ router.get("/:id", async function(req, res, next) {
 
 // INSERT a new student into the DB
 router.post("/", async function(req, res, next) {
-  let { firstname, lastname, minutes, goal, birthdate } = req.body;
-  let sql = `INSERT INTO students (firstname, lastname, minutes, goal, birthdate) VALUES ('${firstname}', '${lastname}', '${minutes}', '${goal}', '${birthdate}')`;
+  let { firstname, lastname, minutes, goal, birthdate, annual, triennial} = req.body;
+  let sql = `INSERT INTO students (firstname, lastname, minutes, goal, birthdate, annual, triennial) VALUES ('${firstname}', '${lastname}', '${minutes}', '${goal}', '${birthdate}', '${annual}', '${triennial}')`;
   try {
     await db(sql);
     const results = await db("SELECT * FROM students");
@@ -37,7 +37,7 @@ router.post("/", async function(req, res, next) {
 // EDIT a student in the DB
 router.put("/:id", async function(req, res, next) {
   let {firstname, lastname, minutes, goal} = req.body;
-  let sql = `UPDATE students SET firstname='${firstname}', lastname='${lastname}', minutes='${minutes}', goal='${goal}' WHERE id= ${req.params.id}`;
+  let sql = `UPDATE students SET firstname='${firstname}', lastname='${lastname}', minutes='${minutes}', birthdate='${birthdate}', annual='${annual}', triennial='${triennial}', goal='${goal}' WHERE id= ${req.params.id}`;
   try {
     await db(sql);
     const results = await db("SELECT* FROM students");
