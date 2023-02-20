@@ -56,6 +56,29 @@ function Form({getStudents}) {
         });
       }
 
+  // async function updateStudent(id) {
+  //   try {
+  //     let options = {
+  //       method: "PUT",
+  //     };
+  //     let results = await fetch(`/api/students/${id}`, options);
+  //     let data = await results.json();
+  //     console.log(data);
+  //     getStudents();
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  //   setNewStudent({
+  //     firstname: "",
+  //     lastname: "",
+  //     birthdate: "",
+  //     annual: "",
+  //     triennial: "",
+  //     goal: "",
+  //     minutes: 0,
+  //   });
+  // }
+
     return (
         <form onSubmit={e => handleSubmit(e)}>
         <h1>My Student List</h1>

@@ -20,6 +20,7 @@ con.connect(function(err) {
 
   // modify to create tables
   let sql = "DROP TABLE if exists students; CREATE TABLE students(id INT NOT NULL AUTO_INCREMENT, firstname VARCHAR(20) not null, lastname VARCHAR(20) not null, minutes INT, goal VARCHAR(400), birthdate DATE, annual DATE, triennial DATE, PRIMARY KEY (id));";
+  // CREATE TABLE sessions (id INT NOT NULL AUTO_INCREMENT, date DATE NOT NULL, options VARCHAR(100), trials INT, anecdotal VARCHAR(500), homework VARCHAR(200), PRIMARY KEY (id), student_id INT FOREIGN KEY REFERENCES students(id))
   con.query(sql, function (err, result) {
     if (err) throw err;
     console.log("Table creation `students` was successful!");

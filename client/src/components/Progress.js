@@ -58,7 +58,7 @@ function Progress({students, getStudents}) {
                         </div>
                         <div className="input-group mb-3">
                             <div className="input-group-prepend">
-                                <label className="input-group-text" for="inputGroupSelect01">Options</label>
+                                <label className="input-group-text" for="inputGroupSelect01">Select one</label>
                             </div>
                             <select name="" id="" className="session-input form-control">
                                 <option value="">Choose...</option>
