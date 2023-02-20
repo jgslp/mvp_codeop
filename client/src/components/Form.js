@@ -2,6 +2,7 @@ import { useState } from "react";
 import './Form.css';
 
 function Form({getStudents}) {
+    // dates initialized to string
     let [newStudent, setNewStudent] = useState({
         firstname: "",
         lastname: "",
