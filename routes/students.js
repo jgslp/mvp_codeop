@@ -36,7 +36,7 @@ router.post("/", async function(req, res, next) {
 
 // EDIT a student in the DB
 router.put("/:id", async function(req, res, next) {
-  let {firstname, lastname, minutes, goal} = req.body;
+  let {firstname, lastname, minutes, goal, annual, triennial, birthdate} = req.body;
   let sql = `UPDATE students SET firstname='${firstname}', lastname='${lastname}', minutes='${minutes}', birthdate='${birthdate}', annual='${annual}', triennial='${triennial}', goal='${goal}' WHERE id= ${req.params.id}`;
   try {
     await db(sql);

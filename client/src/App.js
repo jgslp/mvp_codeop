@@ -60,9 +60,9 @@ function App() {
   //   setNewStudent({
   //     firstname: "",
   //     lastname: "",
-  //     birthdate: Date.now(),
-  //     annual: Date.now(),
-  //     triennial: Date.now(),
+  //     birthdate: "",
+  //     annual: "",
+  //     triennial: "",
   //     goal: "",
   //     minutes: 0,
   //   });
