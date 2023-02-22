@@ -85,7 +85,7 @@ function App() {
         ) : (
           <div>
             <Form getStudents={getStudents}/>
-            <Table students={students} getStudents={getStudents} deleteStudent={deleteStudent}/>
+            <Table students={students} getStudents={getStudents} deleteStudent={deleteStudent} setStudents={setStudents}/>
           </div>
         )}
       </main>
