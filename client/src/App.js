@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import './App.css';
 import Table from './components/Table';
 import Form from './components/Form';
-// import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import Progress from './components/Progress';
 
 
@@ -14,9 +14,6 @@ function App() {
     getStudents();
   }, []);
 
-  const handleChangeView = (isProgressView) => {
-    setIsProgressView(isProgressView);
-}
   // get student
   async function getStudents() {
     try {
@@ -71,14 +68,7 @@ function App() {
  
   return (
     <div className="App">
-       <nav className="navbar navbar-default navbar-fixed-top">
-          <div className="navbar-header navbar-brand">SLP Case Manager</div>
-          <div>
-              <button className={ `nav-button ${!isProgressView ? "btn large" : "btn"} `} onClick={() => handleChangeView(false)}>Caseload</button>
-              <button className={ `nav-button ${isProgressView ? "btn large" : "btn"} `} onClick={() => handleChangeView(true)}>Progress</button>
-          </div>
-        </nav> 
-
+      <Navbar isProgressView={isProgressView} setIsProgressView={setIsProgressView}/>
       <main>
         {isProgressView ? (
             <Progress students={students} getStudents={getStudents}/>
