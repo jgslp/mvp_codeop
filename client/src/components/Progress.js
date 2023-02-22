@@ -48,16 +48,26 @@ function Progress({students, getStudents}) {
                     </div>
                 )}
                 {/* <ProgressForm  profileStudent={profileStudent} getSessions={getSessions}/>  */}
-            </div>
-        <div>
-            {sessions.map((data) => {
-            return (
-                <div key={data.id}>
-                    <div>{data.sessionDate}</div>
-                </div>
-            );
+                <div>
+                            
+                    {sessions.map((data) => {
+                        // if student_id === profileStudent.id
+                        
+                        if (data.student_id === profileStudent.id) {
+                            return (
+                            <div key={data.id}>
+                                <div>{data.sessionDate.toString().substring(0, 10)}</div>
+                                <div>{data.attendance}</div>
+                                <div>{data.trials}% accuracy</div>
+                                <div>{data.anecdote}</div>
+                                <div>Homework: {data.homework}</div>
+                            </div>
+                     );
+                }
             })}
         </div>
+               
+            </div>
     </div>
     )
 }
