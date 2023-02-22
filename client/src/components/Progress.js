@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Sidebar from './Sidebar'
 import ProgressForm from './ProgressForm';
 import './Progress.css';
@@ -6,15 +6,11 @@ import './Progress.css';
 function Progress({students, getStudents}) {
     let [profile, setProfile] = useState(false);
     let [profileStudent, setProfileStudent] = useState({});
-    // let [newSession, setNewSession] = useState ({
-    //     student_id: profileStudent.id,
-    //     sessionDate: newSession.sessionDate,
-    //     attendance: newSession.attendance,
-    //     trials: newSession.trials,
-    //     anecdote: newSession.anecdote,
-    //     homework: newSession.homework
-    // })
+    let [sessions, setSessions] = useState([]);
 
+    useEffect(() => {
+        getSessions();
+      }, []);
 
     // get one student
     async function viewProfile(id) {
@@ -28,37 +24,17 @@ function Progress({students, getStudents}) {
         }
       }
 
-    //   async function addSession() {
-    //     try {
-    //       let body = {
-    //         student_id: profileStudent.id,
-    //         sessionDate: newSession.sessionDate,
-    //         attendance: newSession.attendance,
-    //         trials: newSession.trials,
-    //         anecdote: newSession.anecdote,
-    //         homework: newSession.homework
-    //       };
-    //       let options = {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json" },
-    //         body: JSON.stringify(body)
-    //       };
-    //       let results = await fetch("/sessions", options);
-    //       let data = await results.json();
-    //       console.log(data);
-    //       setNewSession(data);
-    //     } catch (err) {
-    //       console.log(err);
-    //     }
-    //     setNewSession({
-    //       student_id: profileStudent.id,
-    //       sessionDate: "",
-    //       attendance: "",
-    //       trials: 0,
-    //       anecdote: "",
-    //       homework: "",
-    //     });
-    //   }
+      // get sessions
+      async function getSessions() {
+        try {
+          let results = await fetch("/sessions");
+          let data = await results.json();
+          console.log(data);
+          setSessions(data);
+        } catch(err) {
+          console.log(err);
+        }
+      }
 
 
     return (
@@ -71,9 +47,18 @@ function Progress({students, getStudents}) {
                         <h6>{profileStudent.goal}</h6>
                     </div>
                 )}
-                <ProgressForm  profileStudent={profileStudent}/> 
+                {/* <ProgressForm  profileStudent={profileStudent} getSessions={getSessions}/>  */}
             </div>
+        <div>
+            {sessions.map((data) => {
+            return (
+                <div key={data.id}>
+                    <div>{data.sessionDate}</div>
+                </div>
+            );
+            })}
         </div>
+    </div>
     )
 }
 
