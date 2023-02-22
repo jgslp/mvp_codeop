@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Sidebar from './Sidebar'
 import './Progress.css';
 
 function Progress({students, getStudents}) {
@@ -59,27 +60,9 @@ function Progress({students, getStudents}) {
     //   }
 
 
-    let sortedStudents = students.sort(function (a, b) {
-        if (a.lastname < b.lastname) {
-            return -1;
-        }
-        if (a.lastname > b.lastname) {
-            return 1;
-        }
-        return 0;
-    })
-
     return (
         <div className="progress-view">
-            <div className="card bg-light mb-3">
-                <div className="card-header"><h6>Select a student:</h6></div>
-                <ul>
-                     {sortedStudents.map((student) => {
-                    return (
-                    <li key={student.id} onClick={() => viewProfile(student.id)}>{`${student.lastname}, ${student.firstname}`}</li>
-                    )})}
-                </ul>
-            </div>
+            <Sidebar students={students} viewProfile={viewProfile} />
             <div className="profile-section">
                 {profile && (
                     <div>
