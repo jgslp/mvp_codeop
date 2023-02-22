@@ -1,7 +1,5 @@
 # Practicum
 
-This MVP project was created for CodeOp's Full Stack program.
-
 This web app allows speech-language pathologists to keep track of their caseload, including student data and due dates for paperwork. It also allows SLPs to take and record data and session notes.
 
 ## Set-up Instructions
