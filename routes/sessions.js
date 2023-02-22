@@ -23,8 +23,8 @@ router.get("/sessions/:id", async function(req, res, next) {
 
 // INSERT a new student into the DB
 router.post("/sessions", async function(req, res, next) {
-  let { sessionDate, attendance, trials, anecdote, homework} = req.body;
-  let sql = `INSERT INTO sessions (sessionDate, attendance, trials, anecdote, homework) VALUES ('${sessionDate}', '${attendance}', '${trials}', '${anecdote}', '${homework}')`;
+  let { sessionDate, attendance, trials, anecdote, homework, student_id} = req.body;
+  let sql = `INSERT INTO sessions (sessionDate, attendance, trials, anecdote, homework, student_id) VALUES ('${sessionDate}', '${attendance}', '${trials}', '${anecdote}', '${homework}', '${student_id}')`;
   try {
     await db(sql);
     const results = await db("SELECT * FROM sessions");

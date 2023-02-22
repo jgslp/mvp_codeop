@@ -3,9 +3,15 @@ import './Progress.css';
 
 function Progress({students, getStudents}) {
     let [profile, setProfile] = useState(false);
-    let [profileStudent, setProfileStudent] = useState({
-
-    });
+    let [profileStudent, setProfileStudent] = useState({});
+    // let [newSession, setNewSession] = useState ({
+    //     student_id: profileStudent.id,
+    //     sessionDate: newSession.sessionDate,
+    //     attendance: newSession.attendance,
+    //     trials: newSession.trials,
+    //     anecdote: newSession.anecdote,
+    //     homework: newSession.homework
+    // })
 
 
     // get one student
@@ -19,6 +25,39 @@ function Progress({students, getStudents}) {
           console.log(err);
         }
       }
+
+    //   async function addSession() {
+    //     try {
+    //       let body = {
+    //         student_id: profileStudent.id,
+    //         sessionDate: newSession.sessionDate,
+    //         attendance: newSession.attendance,
+    //         trials: newSession.trials,
+    //         anecdote: newSession.anecdote,
+    //         homework: newSession.homework
+    //       };
+    //       let options = {
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/json" },
+    //         body: JSON.stringify(body)
+    //       };
+    //       let results = await fetch("/sessions", options);
+    //       let data = await results.json();
+    //       console.log(data);
+    //       setNewSession(data);
+    //     } catch (err) {
+    //       console.log(err);
+    //     }
+    //     setNewSession({
+    //       student_id: profileStudent.id,
+    //       sessionDate: "",
+    //       attendance: "",
+    //       trials: 0,
+    //       anecdote: "",
+    //       homework: "",
+    //     });
+    //   }
+
 
     let sortedStudents = students.sort(function (a, b) {
         if (a.lastname < b.lastname) {
@@ -58,7 +97,7 @@ function Progress({students, getStudents}) {
                         </div>
                         <div className="input-group mb-3">
                             <div className="input-group-prepend">
-                                <label className="input-group-text" for="inputGroupSelect01">Select one</label>
+                                <label className="input-group-text" htmlFor="inputGroupSelect01">Select one</label>
                             </div>
                             <select name="" id="" className="session-input form-control">
                                 <option value="">Choose...</option>
