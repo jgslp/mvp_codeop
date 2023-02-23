@@ -32,8 +32,18 @@ DB_PASS=your_password
 
 - In a new terminal, in the project directory, run `npm run migrate` to create tables
 
-## Database Schema
+## Backend
+
+### MySQL Database Schema
 
 ![Screenshot 2023-02-23 at 6 43 09 PM](https://user-images.githubusercontent.com/99021032/220987276-cd59bea7-1858-49c4-b146-96f534a4ab39.png)
+
+### API Routes 
+
+## Frontend
+
+### React Components
+
+### User Flow
 
 _This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona._
