@@ -29,10 +29,18 @@ li:hover {
     margin-top: 20px;
 }
 
+.progress-form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 .textarea-span {
  height: 60px;
 }
 
 .session-card {
     margin-top: 20px;
+}
+
+.content {
+    margin-left: 20px;
 }
