@@ -20,7 +20,7 @@ This web app allows speech-language pathologists to keep track of their caseload
 ### Database
 
 - Open a new terminal window
-- Run `mysql -u root -p` to access the MySQL interface
+- Run `mysql -u root -p` to access MySQL
 - Create a .env file in the project's root folder and enter the following:
 
 ```
