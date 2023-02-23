@@ -67,7 +67,7 @@ function ProgressForm({profileStudent, getSessions}) {
                             <div className="input-group-prepend">
                                 <label className="input-group-text" htmlFor="inputGroupSelect01">Select one</label>
                             </div>
-                            <select name="attendance" id="" className="session-input form-control"  id="mySelect" onChange={e => handleChange(e)}>
+                            <select name="attendance" className="session-input form-control"  id="mySelect" onChange={e => handleChange(e)}>
                                 <option >Choose...</option>
                                 {options.map((option, index) => {
                                     return <option key={index}>{option}</option>
