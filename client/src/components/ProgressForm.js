@@ -9,13 +9,14 @@ function ProgressForm({profileStudent, getSessions}) {
         anecdote: "",
         homework: ""
     })
+    const options = [`${profileStudent.firstname} worked hard in speech today.`, `${profileStudent.firstname} had difficulty participating in speech today.`, `${profileStudent.firstname} was unavailable for speech today.`, `${profileStudent.firstname} was absent today.`]
 
     const handleSubmit = e => {
         e.preventDefault();
         addSession();
       };
     
-      const handleChange = e => {
+    const handleChange = e => {
         setNewSession({ ...newSession, [e.target.name]: e.target.value });
       };
 
@@ -66,16 +67,11 @@ function ProgressForm({profileStudent, getSessions}) {
                             <div className="input-group-prepend">
                                 <label className="input-group-text" htmlFor="inputGroupSelect01">Select one</label>
                             </div>
-                            <select name="attendance" id="" className="session-input form-control"  value={newSession.attendance} onChange={e => handleChange(e)}>
-                                <option value="">Choose...</option>
-                                <option value="">{`High five, ${profileStudent.firstname}!`}</option>
-                                <option value="">{`Thanks for your hard work today, ${profileStudent.firstname}!`}</option>
-                                <option value="">{`Amazing job, ${profileStudent.firstname}!`}</option>
-                                <option value="">{`Outstanding effort, ${profileStudent.firstname}!`}</option>
-                                <option value="">{`Keep up the good work, ${profileStudent.firstname}!`}</option>
-                                <option value="">{`${profileStudent.firstname} had difficulty participating in speech today.`}</option>
-                                <option value="">{`${profileStudent.firstname} was unavailable for speech today.`}</option>
-                                <option value="">{`${profileStudent.firstname} was absent from school today.`}</option>
+                            <select name="attendance" id="" className="session-input form-control"  id="mySelect" onChange={e => handleChange(e)}>
+                                <option >Choose...</option>
+                                {options.map((option, index) => {
+                                    return <option key={index}>{option}</option>
+                                })}
                             </select>
                         </div>
                         <div className="input-group mb-3">
