@@ -2,6 +2,8 @@
 
 This web app allows speech-language pathologists to keep track of their caseload, including student data and due dates for paperwork. It also allows SLPs to take and record data and session notes.
 
+## Features
+
 ## Set-up Instructions
 
 ### Backend
@@ -43,6 +45,8 @@ DB_PASS=your_password
 ## Frontend
 
 ### React Components
+
+<img width="828" alt="Screenshot 2023-02-23 at 8 42 59 PM" src="https://user-images.githubusercontent.com/99021032/221013254-89f171a5-0d9b-4692-8b65-b3bb016078a5.png">
 
 ### User Flow
 
