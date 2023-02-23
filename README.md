@@ -32,7 +32,7 @@ DB_PASS=your_password
 
 - In a new terminal, in the project directory, run `npm run migrate` to create tables
 
-_This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona._
-
 ## Database Schema
 ![Screenshot 2023-02-23 at 6 34 34 PM](https://user-images.githubusercontent.com/99021032/220986011-5524c342-9bb4-4fa5-b9cf-e4ff4d6e802f.png)
+
+_This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona._
