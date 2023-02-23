@@ -46,7 +46,9 @@ function Progress({students, getStudents}) {
                         <h6>{profileStudent.goal}</h6>
                     </div>
                 )}
-                <ProgressForm  profileStudent={profileStudent} getSessions={getSessions}/> 
+                {profile && (
+                    < ProgressForm  profileStudent={profileStudent} getSessions={getSessions}/> 
+                )}
                 <div>  
                     {/* most recent session at top */}
                     {sessions.slice(0).reverse().map((data) => {
