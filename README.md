@@ -55,8 +55,7 @@ DB_PASS=your_password
 
 ### API Routes 
 
-<img width="863" alt="Screenshot 2023-02-23 at 10 22 42 PM" src="https://user-images.githubusercontent.com/99021032/221033209-e588cea0-18f7-48cd-a299-8cd2780b197f.png">
-
+<img width="863" alt="Screenshot 2023-02-23 at 10 23 30 PM" src="https://user-images.githubusercontent.com/99021032/221033346-d3abb04a-20e7-4357-8746-4d2989cd8caa.png">
 
 ## Frontend
 
