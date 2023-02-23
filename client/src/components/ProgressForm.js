@@ -40,6 +40,7 @@ function ProgressForm({profileStudent, getSessions}) {
           let data = await results.json();
           console.log(data);
           setNewSession(data);
+          getSessions();
         } catch (err) {
           console.log(err);
         }
