@@ -38,7 +38,7 @@ DB_PASS=your_password
 
 ### MySQL Database Schema
 
-<img width="1030" alt="Screenshot 2023-02-23 at 8 44 21 PM" src="https://user-images.githubusercontent.com/99021032/221013542-cbc3927a-5387-4552-bf51-200d7bd21872.png">
+![Screenshot 2023-02-23 at 6 34 34 PM](https://user-images.githubusercontent.com/99021032/221013791-bc75ed1f-73e7-478c-a9f0-d3b1d6f65b1c.png)
 
 ### API Routes 
 
