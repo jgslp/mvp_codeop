@@ -4,6 +4,19 @@ This web app allows speech-language pathologists to keep track of their caseload
 
 ## Features
 
+The app has two pages. On the Students page:
+- There is a form where the speech therapist can add new students to their student list.
+- The speech therapist can see a table listing all of the students on their caseload and their data, including their first and last names, date of birth, the number of minutes of speech therapy they receive per month, and the dates that their annual review and triennial reevaluations are due. 
+- Each column of the table is sortable in ascending and descending order. The clinician can easily locate students and see which paperwork is due soon by clicking on the column header. 
+
+On the Progress page, the speech pathologist can take and record student data:
+- There is a list of students in the sidebar listed in alphabetical order by last name. 
+- Upon clicking on a student's name in the sidebar, a component appears which shows: 
+    - the student's name, speech goal, a form for adding new sessions
+    - the student's speech goal
+    - a form for taking and recording session data
+    - a list of previous sessions, where the most recent session is at the top and the oldest at the bottom 
+
 ## Set-up Instructions
 
 ### Backend
