@@ -3,11 +3,11 @@ import React, {useState} from "react";
 function ProgressForm({profileStudent, getSessions}) {
     let [newSession, setNewSession] = useState ({
         student_id: profileStudent.id,
-        sessionDate: newSession.sessionDate,
-        attendance: newSession.attendance,
-        trials: newSession.trials,
-        anecdote: newSession.anecdote,
-        homework: newSession.homework
+        sessionDate: "",
+        attendance: "",
+        trials: 0,
+        anecdote: "",
+        homework: ""
     })
 
     const handleSubmit = e => {

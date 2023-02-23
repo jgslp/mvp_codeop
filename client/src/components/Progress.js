@@ -47,12 +47,11 @@ function Progress({students, getStudents}) {
                         <h6>{profileStudent.goal}</h6>
                     </div>
                 )}
-                {/* <ProgressForm  profileStudent={profileStudent} getSessions={getSessions}/>  */}
+                <ProgressForm  profileStudent={profileStudent} getSessions={getSessions}/> 
                 <div>
                             
                     {sessions.map((data) => {
-                        // if student_id === profileStudent.id
-                        
+                        // if student_id from sessions === selected student's id
                         if (data.student_id === profileStudent.id) {
                             return (
                             <div key={data.id}>
