@@ -12,7 +12,7 @@ function Sidebar({students, viewProfile}) {
     })
 
     return (
-        <div className="card bg-light mb-3">
+        <div className="card bg-light mb-3 sidebar-card">
         <div className="card-header"><h6>Select a student:</h6></div>
         <ul>
              {sortedStudents.map((student) => {

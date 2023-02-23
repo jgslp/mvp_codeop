@@ -14,7 +14,7 @@ li:hover {
     color: #24a0ed;
 }
 
-.card {
+.sidebar-card {
     width: 14rem;
     margin-top: 20px;
 }
@@ -31,4 +31,8 @@ li:hover {
 
 .textarea-span {
  height: 60px;
+}
+
+.session-card {
+    margin-top: 20px;
 }
