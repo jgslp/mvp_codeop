@@ -45,8 +45,8 @@ function Progress({students, getStudents}) {
                 <div className="profile-section">
                     {profile && (
                         <div>
-                            <h3>{`${profileStudent.firstname} ${profileStudent.lastname}`}</h3>
-                            <h6>{profileStudent.goal}</h6>
+                            <h2>{`${profileStudent.firstname} ${profileStudent.lastname}`}</h2>
+                            <h5>{profileStudent.goal}</h5>
                         </div>
                     )}
                     <div className="progress-form">

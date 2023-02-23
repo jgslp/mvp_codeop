@@ -94,7 +94,9 @@ function ProgressForm({profileStudent, getSessions}) {
                             <textarea className="session-input form-control" name="homework"  value={newSession.homewrok} onChange={e => handleChange(e)}></textarea>
                         </div>
                     </div>
-                    <button type="submit" className="btn btn-primary">Add session</button>
+                    <div className=" add-student-btn">
+                        <button type="submit" className="btn btn-primary">Add session</button>
+                    </div>
                 </form>
     )
 }
