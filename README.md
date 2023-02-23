@@ -62,6 +62,7 @@ DB_PASS=your_password
 <img width="1030" alt="Screenshot 2023-02-23 at 8 44 21 PM" src="https://user-images.githubusercontent.com/99021032/221013542-cbc3927a-5387-4552-bf51-200d7bd21872.png">
 
 ### User Flow
-<img width="979" alt="Screenshot 2023-02-23 at 10 01 18 PM" src="https://user-images.githubusercontent.com/99021032/221029268-2ea15507-2c5d-4e94-98f9-47b54eb2a50e.png">
+
+<img width="979" alt="Screenshot 2023-02-23 at 10 04 10 PM" src="https://user-images.githubusercontent.com/99021032/221029795-d678b867-e740-4641-9367-6ae191ed3a37.png">
 
 _This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona._
