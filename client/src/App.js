@@ -74,7 +74,7 @@ function App() {
             <Progress students={students} getStudents={getStudents}/>
         ) : (
           <div>
-            <div className="col-4 offset-4">
+            <div className="col-6 offset-3">
               <Form getStudents={getStudents}/>
             </div>
             <div className="col-10 offset-1">

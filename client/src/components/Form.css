@@ -29,7 +29,7 @@ input[type=date] {
 .goal-input {
     display: flex;
     flex-direction: column;
-    width: 98%;
+    width: 85%;
 }
 
 .small-input {

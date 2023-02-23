@@ -140,8 +140,9 @@ function Form({getStudents}) {
               />  
               </div>
               </div>
+ 
         </div>
-        <div className="goal-input">
+                    <div className="goal-input">
              <div className="input-group">
                  <div className="input-group-prepend">
                     <span className="input-group-text goal-span">Goal</span>
@@ -153,7 +154,7 @@ function Form({getStudents}) {
                     value={newStudent.goal} 
                  ></textarea>
                  </div>
-          </div>
+          </div>  
           <button type="Submit" className="btn btn-primary">Add Student</button>  
         </div>   
        
