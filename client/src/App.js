@@ -14,7 +14,7 @@ function App() {
     getStudents();
   }, []);
 
-  // get student
+  // get students
   async function getStudents() {
     try {
       let results = await fetch("/students");
@@ -69,13 +69,17 @@ function App() {
   return (
     <div className="App">
       <Navbar isProgressView={isProgressView} setIsProgressView={setIsProgressView}/>
-      <main>
+      <main className="row">
         {isProgressView ? (
             <Progress students={students} getStudents={getStudents}/>
         ) : (
           <div>
-            <Form getStudents={getStudents}/>
-            <Table students={students} getStudents={getStudents} deleteStudent={deleteStudent} setStudents={setStudents}/>
+            <div className="col-4 offset-4">
+              <Form getStudents={getStudents}/>
+            </div>
+            <div className="col-10 offset-1">
+              <Table students={students} getStudents={getStudents} deleteStudent={deleteStudent} setStudents={setStudents}/>
+            </div>          
           </div>
         )}
       </main>

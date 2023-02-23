@@ -29,7 +29,7 @@ input[type=date] {
 .goal-input {
     display: flex;
     flex-direction: column;
-    width: 640px;
+    width: 98%;
 }
 
 .small-input {
@@ -37,7 +37,6 @@ input[type=date] {
 }
 
 .large-input {
-    width: 412px;
     height: 70px;
 }
 
