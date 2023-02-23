@@ -36,7 +36,6 @@ function Progress({students, getStudents}) {
         }
       }
 
-
     return (
         <div className="progress-view">
             <Sidebar students={students} viewProfile={viewProfile} />
@@ -49,7 +48,8 @@ function Progress({students, getStudents}) {
                 )}
                 <ProgressForm  profileStudent={profileStudent} getSessions={getSessions}/> 
                 <div>  
-                    {sessions.map((data) => {
+                    {/* most recent session at top */}
+                    {sessions.slice(0).reverse().map((data) => {
                         // if student_id from sessions === selected student's id
                         if (data.student_id === profileStudent.id) {
                             return (
