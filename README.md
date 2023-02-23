@@ -46,7 +46,7 @@ DB_PASS=your_password
 
 ### React Components
 
-<img width="828" alt="Screenshot 2023-02-23 at 8 42 59 PM" src="https://user-images.githubusercontent.com/99021032/221013254-89f171a5-0d9b-4692-8b65-b3bb016078a5.png">
+<img width="1030" alt="Screenshot 2023-02-23 at 8 44 21 PM" src="https://user-images.githubusercontent.com/99021032/221013542-cbc3927a-5387-4552-bf51-200d7bd21872.png">
 
 ### User Flow
 
