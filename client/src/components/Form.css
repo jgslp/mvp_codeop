@@ -44,3 +44,8 @@ textarea {
 .goal-span {
     height: 145px;
 }
+
+
+input[type=date] {
+    color: #999
+}
