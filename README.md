@@ -55,15 +55,14 @@ DB_PASS=your_password
 
 ### API Routes 
 
-![Screenshot 2023-02-23 at 10 33 30 PM](https://user-images.githubusercontent.com/99021032/221035384-e562295a-7328-431c-bba7-4684732f6e26.png)
-![Screenshot 2023-02-23 at 10 34 21 PM](https://user-images.githubusercontent.com/99021032/221035492-9efb2ea2-88b2-43e3-98f9-b67309334989.png)
-
+<img width="1030" alt="api routes" src="/images/apiRoutes1.png">
+<img width="1030" alt="api routes" src="/images/apiRoutes2.png">
 
 ## Frontend
 
 ### User Flow
 
-<img width="954" alt="user flow diagram" src="/images/userFlow.png">
+<img width="1030" alt="user flow diagram" src="/images/userFlow.png">
 
 ### React Components
 
