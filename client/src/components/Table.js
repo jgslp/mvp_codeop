@@ -13,7 +13,7 @@ function Table({students, deleteStudent, getStudents, setStudents}) {
   { label: "Annual Review", accessor: "annual" },
   { label: "Triennial Reevaluation", accessor: "triennial" },
   { label: "Minutes per month", accessor: "minutes" },
-  { label: "Edit student", accessor: "edit"},
+  // { label: "Edit student", accessor: "edit"},
   { label: "Remove student", accessor: "remove"}
  ];
 
@@ -40,7 +40,7 @@ function Table({students, deleteStudent, getStudents, setStudents}) {
     <caption>
     </caption>
     <TableHead columns={columns} handleSorting={handleSorting}/>
-    <TableBody columns={columns} tableData={students} getStudents={getStudents} deleteStudent={deleteStudent}/>
+    <TableBody columns={columns} tableData={students} getStudents={getStudents} deleteStudent={deleteStudent} />
    </table>
   </>
  );

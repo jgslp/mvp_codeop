@@ -17,7 +17,8 @@ module.exports = async function db(query) {
       user: DB_USER || "root",
       password: DB_PASS,
       database: DB_NAME || "database",
-      multipleStatements: true
+      multipleStatements: true,
+      timezone: "utc"
     });
 
     con.connect(function(err) {

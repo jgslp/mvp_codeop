@@ -13,7 +13,8 @@ const con = mysql.createConnection({
   user: DB_USER || "root",
   password: DB_PASS,
   database: DB_NAME || "speech",
-  multipleStatements: true
+  multipleStatements: true,
+  timezone: "utc"
 });
 
 con.connect(function(err) {

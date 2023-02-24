@@ -54,15 +54,15 @@ function App() {
   //   } catch (err) {
   //     console.log(err);
   //   }
-    // setModalStudent({
-    //   firstname: "",
-    //   lastname: "",
-    //   birthdate: "",
-    //   annual: "",
-    //   triennial: "",
-    //   goal: "",
-    //   minutes: 0,
-    // });
+  //   setModalStudent({
+  //     firstname: "",
+  //     lastname: "",
+  //     birthdate: "",
+  //     annual: "",
+  //     triennial: "",
+  //     goal: "",
+  //     minutes: 0,
+  //   });
   // }
 
  
