@@ -14,6 +14,7 @@ On the Progress page, the speech pathologist can take and record session data:
 - Upon clicking on a student's name in the sidebar, a component appears which shows: 
     - the selected student's name, speech goal, a form for adding new sessions
     - the student's speech goal
+    - a calculator that the clinician can use in real time to track student trials
     - a form for taking and recording session data
     - a list of summaries of previous sessions, where the most recent session is at the top and the oldest at the bottom 
 
