@@ -76,13 +76,11 @@ function ProgressForm({profileStudent, getSessions}) {
                 <form onSubmit={e => handleSubmit(e)}>
                     <div className="calculator">
                         <div>
-                            <div>Trials: {correct} / {correct + incorrect}</div>
-                            <div>Percentage Correct: {((correct / (correct + incorrect)) * 100).toFixed(0)}</div>
-                            <button className="btn btn-outline-success" onClick={increaseCorrect}>+ correct</button>
-                            <button className="btn btn-outline-danger" onClick={increaseIncorrect}>- incorrect</button>
-                        </div>
-                        <div>
-                            <button className="btn btn-outline-warning" onClick={reset}>reset</button>
+                            <div className="results">Trials: {correct} / {correct + incorrect}</div>
+                            <div className="results">Percentage Correct: {((correct / (correct + incorrect)) * 100).toFixed(0)}</div>
+                            <button className="btn btn-outline-success calc" onClick={increaseCorrect}>+ correct</button>
+                            <button className="btn btn-outline-danger calc" onClick={increaseIncorrect}>- incorrect</button>
+                            <button className="btn btn-outline-warning calc" onClick={reset}>reset</button>
                         </div>
                     </div>
                     <div className="progress-inputs">
