@@ -152,7 +152,7 @@ function Form({getStudents}) {
                     value={newStudent.goal} 
                  ></textarea>
                  </div>
-                 </div>  
+              </div>  
         </div>
           <button type="Submit" className="btn btn-primary">Add Student</button>  
         </div>   
