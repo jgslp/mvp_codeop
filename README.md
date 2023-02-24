@@ -63,10 +63,10 @@ DB_PASS=your_password
 
 ### User Flow
 
-<img width="954" alt="Screenshot 2023-02-23 at 10 05 59 PM" src="https://user-images.githubusercontent.com/99021032/221030101-e57dc199-7d65-4898-a115-4cf7dd88968b.png">
+<img width="954" alt="user flow diagram" src="/images/userFlow.png">
 
 ### React Components
 
-<img width="1030" alt="Screenshot 2023-02-23 at 8 44 21 PM" src="/images/componentStructure.png">
+<img width="1030" alt="component diagram" src="/images/componentStructure.png">
 
 _This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona._
