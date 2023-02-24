@@ -75,7 +75,7 @@ function App() {
         ) : (
           <div>
             <div>
-              <Form getStudents={getStudents} className="col-6 offset-3"/>
+              <Form getStudents={getStudents}/>
             </div>
             <div className="col-10 offset-1">
               <Table students={students} getStudents={getStudents} deleteStudent={deleteStudent} setStudents={setStudents}/>

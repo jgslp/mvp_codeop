@@ -56,7 +56,7 @@ function Form({getStudents}) {
       }
 
     return (
-        <form onSubmit={e => handleSubmit(e)}>
+        <form onSubmit={e => handleSubmit(e)} >
         <h1>My Students</h1>
         <div className="inputs">
           <div className="inputs-top">
@@ -140,10 +140,8 @@ function Form({getStudents}) {
               />  
               </div>
               </div>
- 
-        </div>
-                    <div className="goal-input">
-             <div className="input-group">
+              <div className="goal-input">
+              <div className="input-group">
                  <div className="input-group-prepend">
                     <span className="input-group-text goal-span">Goal</span>
                  </div>      
@@ -154,7 +152,8 @@ function Form({getStudents}) {
                     value={newStudent.goal} 
                  ></textarea>
                  </div>
-          </div>  
+                 </div>  
+        </div>
           <button type="Submit" className="btn btn-primary">Add Student</button>  
         </div>   
        
