@@ -8,7 +8,9 @@ function ProgressForm({profileStudent, getSessions}) {
         trials: 0,
         anecdote: "",
         homework: ""
-    })
+    });
+    let [correct, setCorrect] = useState(0);
+    let [incorrect, setIncorrect] = useState(0);
 
     // options for dropdown menu
     const options = [`${profileStudent.firstname} worked hard in speech today.`, `${profileStudent.firstname} had difficulty participating in speech today.`, `${profileStudent.firstname} was unavailable for speech today.`, `${profileStudent.firstname} was absent today.`]
@@ -57,8 +59,32 @@ function ProgressForm({profileStudent, getSessions}) {
         });
       }
 
+      function increaseCorrect() {
+        setCorrect(correct + 1);
+      }
+
+      function increaseIncorrect() {
+        setIncorrect(incorrect + 1);
+      }
+
+      function reset() {
+        setCorrect(0);
+        setIncorrect(0);
+      }
+
     return (
                 <form onSubmit={e => handleSubmit(e)}>
+                    <div className="calculator">
+                        <div>
+                            <div>Trials: {correct} / {correct + incorrect}</div>
+                            <div>Percentage Correct: {((correct / (correct + incorrect)) * 100).toFixed(0)}</div>
+                            <button className="btn btn-outline-success" onClick={increaseCorrect}>+ correct</button>
+                            <button className="btn btn-outline-danger" onClick={increaseIncorrect}>- incorrect</button>
+                        </div>
+                        <div>
+                            <button className="btn btn-outline-warning" onClick={reset}>reset</button>
+                        </div>
+                    </div>
                     <div className="progress-inputs">
                         <div className="input-group mb-3">
                             <div className="input-group-prepend">
