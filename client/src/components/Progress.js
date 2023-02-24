@@ -3,7 +3,7 @@ import Sidebar from './Sidebar'
 import ProgressForm from './ProgressForm';
 import './Progress.css';
 
-function Progress({students, getStudents}) {
+function Progress({students}) {
     let [profile, setProfile] = useState(false);
     let [profileStudent, setProfileStudent] = useState({});
     let [sessions, setSessions] = useState([]);

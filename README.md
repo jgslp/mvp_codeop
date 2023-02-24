@@ -67,6 +67,6 @@ DB_PASS=your_password
 
 ### React Components
 
-<img width="1030" alt="Screenshot 2023-02-23 at 8 44 21 PM" src="https://user-images.githubusercontent.com/99021032/221013542-cbc3927a-5387-4552-bf51-200d7bd21872.png">
+<img width="1030" alt="Screenshot 2023-02-23 at 8 44 21 PM" src="/images/componentStructure.png">
 
 _This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona._
