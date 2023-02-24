@@ -5,7 +5,6 @@ import Form from './components/Form';
 import Navbar from './components/Navbar';
 import Progress from './components/Progress';
 
-
 function App() {
   let [students, setStudents] = useState([]);
   let [isProgressView, setIsProgressView] = useState(false);
@@ -26,7 +25,6 @@ function App() {
     }
   }
 
-
   // delete student from db
   async function deleteStudent(id) {
     try {
@@ -41,11 +39,13 @@ function App() {
       console.log(err);
     }
   }
-
+ 
   // async function updateStudent(id) {
   //   try {
+  //     let body = {firstname: modalStudent.firstname, lastname: modalStudent.lastname, birthdate: modalStudent.birthdate, annual: modalStudent.annual, triennial: modalStudent.triennial, minutes: modalStudent.minutes, goal:modalStudent.goal};
   //     let options = {
   //       method: "PUT",
+  //       body: JSON.stringify(body)
   //     };
   //     let results = await fetch(`/api/students/${id}`, options);
   //     let data = await results.json();
@@ -54,15 +54,15 @@ function App() {
   //   } catch (err) {
   //     console.log(err);
   //   }
-  //   setNewStudent({
-  //     firstname: "",
-  //     lastname: "",
-  //     birthdate: "",
-  //     annual: "",
-  //     triennial: "",
-  //     goal: "",
-  //     minutes: 0,
-  //   });
+    // setModalStudent({
+    //   firstname: "",
+    //   lastname: "",
+    //   birthdate: "",
+    //   annual: "",
+    //   triennial: "",
+    //   goal: "",
+    //   minutes: 0,
+    // });
   // }
 
  
@@ -74,12 +74,12 @@ function App() {
             <Progress students={students} getStudents={getStudents}/>
         ) : (
           <div>
-            <div className="col-6 offset-3">
-              <Form getStudents={getStudents}/>
+            <div>
+              <Form getStudents={getStudents} className="col-6 offset-3"/>
             </div>
             <div className="col-10 offset-1">
               <Table students={students} getStudents={getStudents} deleteStudent={deleteStudent} setStudents={setStudents}/>
-            </div>          
+            </div>     
           </div>
         )}
       </main>

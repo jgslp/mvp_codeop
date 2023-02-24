@@ -1,3 +1,4 @@
+import React from "react";
 
 function TableBody({ tableData, deleteStudent}) {
 
@@ -12,7 +13,7 @@ function TableBody({ tableData, deleteStudent}) {
             <td>{data.annual ? data.annual.toString().substring(0, 10) : "——"}</td>
             <td>{data.triennial ? data.triennial.toString().substring(0, 10) : "——"}</td>
             <td>{data.minutes ? data.minutes : "——"}</td>
-            <td><span className="material-symbols-outlined" >edit_square</span></td>
+            <td><span className="material-symbols-outlined">edit_square</span></td>
             <td><span className="material-symbols-outlined" onClick={() => deleteStudent(data.id)}>delete</span></td>
         </tr>
        );
