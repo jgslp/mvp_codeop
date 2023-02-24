@@ -1,4 +1,4 @@
-
+/* centers form */
 .inputs {
     display: flex;
     flex-direction: column;
@@ -6,46 +6,38 @@
     align-items: center;
 }
 
+/* puts form in columns */
 .inputs-top {
     display: flex;
 }
 
+/* spacing for first column */
 .basic-inputs {
     display: flex;
     flex-direction: column;
     padding: 5px;
 }
 
+/* spacing for second column */
 .date-inputs {
     display: flex;
     padding: 5px;
     flex-direction: column;
 }
 
+/* spacing for third column */
 .goal-input {
     display: flex;
     flex-direction: column;
     padding: 5px;
 }
 
-.small-input {
-    width: 200px;
-}
-
-
-.date-label {
-    padding-bottom: 2px
-}
-
-textarea {
-   height: 145px;
-}
-
+/* set goal prepend height */
 .goal-span {
     height: 145px;
 }
 
-
+/* Makes date placeholder color gray */
 input[type=date] {
     color: #999
 }
