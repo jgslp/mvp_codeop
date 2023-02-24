@@ -63,7 +63,7 @@ DB_PASS=your_password
 
 ### User Flow
 
-<img width="1030" alt="user flow diagram" src="/images/userFlow.png">
+<img width="1030" alt="user flow diagram" src="/images/userFlow2.png">
 
 ### React Components
 
