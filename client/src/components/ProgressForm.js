@@ -93,7 +93,7 @@ function ProgressForm({profileStudent, getSessions}) {
                             <div className="input-group-prepend">
                                 <span className="input-group-text textarea-span">Skill to practice at home</span>
                             </div>
-                            <textarea className="session-input form-control" name="homework"  value={newSession.homewrok} onChange={e => handleChange(e)}></textarea>
+                            <textarea className="session-input form-control" name="homework"  value={newSession.homework} onChange={e => handleChange(e)}></textarea>
                         </div>
                     </div>
                     <div className=" add-student-btn">
