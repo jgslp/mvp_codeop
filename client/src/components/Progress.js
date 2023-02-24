@@ -61,7 +61,7 @@ function Progress({students}) {
                             if (data.student_id === profileStudent.id) {
                                 return (
                                 <div key={data.id} className="card bg-light mb-3 session-card">
-                                    <div className="card-header session-header d-flex justify-content-end">{data.sessionDate.toString().substring(0, 10)}</div>
+                                    <div className="card-header session-header d-flex justify-content-end">{data.sessionDate.toString().substring(0, 10).split("-").reverse().join("-") }</div>
                                     <div className="card-body">
                                         <h5 className="card-title">{data.attendance}</h5>
                                     <div>{data.anecdote}</div>
