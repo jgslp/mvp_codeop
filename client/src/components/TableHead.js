@@ -16,15 +16,7 @@ function TableHead({ columns, handleSorting }) {
      <thead>
       <tr>
        {columns.map(({ label, accessor, sortable }) => {
-        // supposed to add sort images to column labels, not working
-        const cl = sortable
-        ? sortField === accessor && order === "asc"
-          ? "up"
-          : sortField === accessor && order === "desc"
-          ? "down"
-          : "default"
-          : ""; 
-        return (<th key={accessor} className={cl} onClick={() => handleSortingChange(accessor)}>
+        return (<th key={accessor} onClick={() => handleSortingChange(accessor)}>
             {label}
             </th>
          );

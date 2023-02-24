@@ -42,24 +42,7 @@
     text-align: left;
   }
   .table th:hover {
-    color:#5bc0de;
-  }
-  
-  .table th.up {
-    background-image: url("./images/up_arrow.png");
-  }
-  .table th.down {
-    background-image: url("./images/down_arrow.png");
-  }
-  .table th.default {
-    background-image: url("./images/default.png");
-  }
-  th.up,
-  th.default,
-  th.down {
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center right;
+    color:#24a0ed;
   }
   
   .table td {
