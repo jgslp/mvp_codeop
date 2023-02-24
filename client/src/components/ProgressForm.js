@@ -9,6 +9,8 @@ function ProgressForm({profileStudent, getSessions}) {
         anecdote: "",
         homework: ""
     })
+
+    // options for dropdown menu
     const options = [`${profileStudent.firstname} worked hard in speech today.`, `${profileStudent.firstname} had difficulty participating in speech today.`, `${profileStudent.firstname} was unavailable for speech today.`, `${profileStudent.firstname} was absent today.`]
 
     const handleSubmit = e => {
@@ -81,13 +83,13 @@ function ProgressForm({profileStudent, getSessions}) {
                             </div>
                             <input type="number" name="trials" className="session-input form-control"  value={newSession.trials} onChange={e => handleChange(e)}></input>
                         </div>
-                        <div className="input-group">
+                        <div className="input-group progress-textarea">
                             <div className="input-group-prepend">
                                 <span className="input-group-text textarea-span">Anecdotal data</span>
                             </div>
                             <textarea className="session-input form-control" name="anecdote"  value={newSession.anecdote} onChange={e => handleChange(e)} ></textarea>
                         </div>
-                        <div className="input-group">
+                        <div className="input-group progress-textarea">
                             <div className="input-group-prepend">
                                 <span className="input-group-text textarea-span">Skill to practice at home</span>
                             </div>

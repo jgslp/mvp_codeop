@@ -16,14 +16,14 @@ function TableHead({ columns, handleSorting }) {
      <thead>
       <tr>
        {columns.map(({ label, accessor, sortable }) => {
-        // const cl = sortable
-        // ? sortField === accessor && order === "asc"
-        //   ? "up"
-        //   : sortField === accessor && order === "desc"
-        //   ? "down"
-        //   : "default"
-        // : ""; removed className={cl} in line below
-        return (<th key={accessor} onClick={() => handleSortingChange(accessor)}>
+        const cl = sortable
+        ? sortField === accessor && order === "asc"
+          ? "up"
+          : sortField === accessor && order === "desc"
+          ? "down"
+          : "default"
+          : ""; 
+        return (<th key={accessor} className={cl} onClick={() => handleSortingChange(accessor)}>
             {label}
             </th>
          );

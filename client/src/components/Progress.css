@@ -41,6 +41,10 @@ li:hover {
  height: 60px;
 }
 
+.progress-textarea {
+    margin-bottom: 10px;
+}
+
 .add-student-btn {
     display: flex;
     justify-content: center;
