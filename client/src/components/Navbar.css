@@ -1,21 +1,25 @@
-
+/* set navbar color */
 .navbar{
     padding: 10px 10px 10px 0px;
     background-color: #24a0ed;
     transition: all ease 0.4s;
   }
 
+  /* top left of navbar */
   .navbar-brand{
     font-size: 22px;
     color: white !important;
+    /* color: white; */
     margin-left: 20px;
   }
   
+  /* top right buttons */
  .nav-button {
     font-size: 16px;
     color: white;
   }
 
+  /* changes font size on top right for active page */
   .large {
     font-size: 18px;
     font-weight: bold;

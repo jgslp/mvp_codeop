@@ -9,7 +9,7 @@ function Navbar({isProgressView, setIsProgressView}) {
 
     return (
         <nav className="navbar navbar-default navbar-fixed-top">
-          <div className="navbar-header navbar-brand">SLP Case Manager</div>
+          <div className="navbar-brand">SLP Case Manager</div>
           <div>
               <button className={ `nav-button ${!isProgressView ? "btn large" : "btn"} `} onClick={() => handleChangeView(false)}>Caseload</button>
               <button className={ `nav-button ${isProgressView ? "btn large" : "btn"} `} onClick={() => handleChangeView(true)}>Progress</button>
