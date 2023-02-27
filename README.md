@@ -1,6 +1,6 @@
 # SLP Case Manager
 
-This web app allows speech-language pathologists to keep track of their caseload, including student data and due dates for paperwork. It also allows SLPs to take and record data and session notes.
+Individual MVP project. This web app allows speech-language pathologists to keep track of their caseload, including student data and due dates for paperwork. It also allows SLPs to take and record data and session notes.
 
 ## Features
 
@@ -32,7 +32,6 @@ On the Progress page, the speech pathologist can take and record session data:
 - Enter `cd client` to navigate to the client folder
 - Run `npm install` to install React dependencies
 
-
 ### Database Setup
 
 - Open a new terminal window
@@ -48,13 +47,6 @@ DB_TIMEZONE="+00:00"
 ```
 
 - In a new terminal, in the project directory, run `npm run migrate` to create tables
-
-### 
-
-
- - Run `npm start` to start the client server on port 3000.
-
-## Backend
 
 ### MySQL Database Schema
 
