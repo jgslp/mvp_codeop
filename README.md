@@ -31,6 +31,7 @@ On the Progress page, the speech pathologist can take and record session data:
 - Open a new terminal window
 - Enter `cd client` to navigate to the client folder
 - Run `npm install` to install React dependencies
+- Run `npm start` in the client folder to start the server on port 3000.
 
 ### Database Setup
 
