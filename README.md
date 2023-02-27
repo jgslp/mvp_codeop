@@ -26,7 +26,7 @@ On the Progress page, the speech pathologist can take and record session data:
 - Run `npm install` in the project's root folder to install Node dependencies.
 - Run `npm start` in the root folder to start the Express server on port 5001.
 
-## Frontend
+### Frontend
 
 - Open a new terminal window
 - Enter `cd client` to navigate to the client folder
