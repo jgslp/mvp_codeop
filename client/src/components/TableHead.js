@@ -15,7 +15,7 @@ function TableHead({ columns, handleSorting }) {
     return (
      <thead>
       <tr>
-       {columns.map(({ label, accessor, sortable }) => {
+       {columns.map(({ label, accessor }) => {
         return (<th key={accessor} onClick={() => handleSortingChange(accessor)}>
             {label}
             </th>
