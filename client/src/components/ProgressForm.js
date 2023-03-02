@@ -78,7 +78,7 @@ function ProgressForm({profileStudent, getSessions}) {
                     <div className="calculator">
                         <div>
                             <div className="results">Trials: {correct} / {correct + incorrect}</div>
-                            <div className="results">Percentage Correct: {(correct > 0) ? (((correct / (correct + incorrect)) * 100).toFixed(0)) : " " }</div>
+                            <div className="results">Percentage Correct: {(correct > 0) ? (((correct / (correct + incorrect)) * 100).toFixed(0)) : 0 }%</div>
                             <button className="btn btn-outline-success calc" onClick={increaseCorrect}>+ correct</button>
                             <button className="btn btn-outline-danger calc" onClick={increaseIncorrect}>- incorrect</button>
                             <button className="btn btn-outline-warning calc" onClick={reset}>reset</button>
