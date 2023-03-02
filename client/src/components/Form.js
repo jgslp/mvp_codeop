@@ -21,6 +21,7 @@ function Form({getStudents}) {
         setNewStudent({ ...newStudent, [e.target.name]: e.target.value });
       };
 
+      // add student to db
       async function addStudent() {
         try {
           let body = {

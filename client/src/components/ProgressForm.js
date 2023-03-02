@@ -24,7 +24,7 @@ function ProgressForm({profileStudent, getSessions}) {
         setNewSession({ ...newSession, [e.target.name]: e.target.value });
       };
 
-
+      // add session to db
       async function addSession() {
         try {
           let body = {
@@ -59,6 +59,7 @@ function ProgressForm({profileStudent, getSessions}) {
         });
       }
 
+      // calculator functions
       function increaseCorrect() {
         setCorrect(correct + 1);
       }

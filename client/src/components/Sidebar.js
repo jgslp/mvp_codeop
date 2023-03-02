@@ -1,6 +1,7 @@
 import React from "react";
 
 function Sidebar({students, viewProfile}) {
+    // list students in alphabetical order by lastname
     let sortedStudents = students.sort(function (a, b) {
         if (a.lastname < b.lastname) {
             return -1;

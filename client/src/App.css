@@ -20,23 +20,10 @@ body {
 
 /*  Table  */
 
-.table_container {
-  max-width: 750px;
-  /* max-height: 500px; */
-  margin: 0 auto;
-  overflow: auto;
-}
-
-.table {
-  width: 100%;
-  border-spacing: 0;
-}
-
-/* table head  */
+/* column labels */
 .table th {
-  background: #fff;
   padding: 8px 10px;
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 2px solid black;
   font-weight: bold;
   text-align: left;
 }
@@ -48,12 +35,12 @@ body {
 
 /* spacing between rows */
 .table td {
-  padding: 8px 20px;
+  padding: 8px 30px;
 }
 
 /* makes every other line gray */
 .table tbody tr:nth-child(n) td {
-  background: #eff0f0;
+  background: #e9ecef;
 }
 
 /* makes every other line white */
