@@ -60,6 +60,10 @@ DB_TIMEZONE="+00:00"
 
 ## Frontend
 
+### Wireframes
+
+<img width="1030" alt="user flow diagram" src="/images/wireframe-uizard.png">
+
 ### User Flow
 
 <img width="1030" alt="user flow diagram" src="/images/userFlow2.png">
