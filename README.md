@@ -23,7 +23,7 @@ On the Progress page, the speech pathologist can take and record session data:
 ### Dependencies
 
 - Open a new terminal window
-- Run `npm install` in the project's root folder to install Node/Express dependencies.
+- Run `npm install` in the project's root folder to install Node/Express dependencies
 - Open a new terminal window
 - Enter `cd client` to navigate to the client folder
 - Run `npm install` to install React dependencies
